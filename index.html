@@ -2282,20 +2282,18 @@
     }
 }
 
-        /* Container principal */
-.flip-cards-container {
+   .flip-cards-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Agora sempre serão 4 por linha */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* ajusta o número de colunas */
   gap: 24px;
   max-width: 800px;
   margin: 0 auto;
-  padding: 0 16px; /* espaçamento lateral */
+  padding: 0 16px;
+  justify-content: center; /* centraliza o conjunto de colunas */
 }
 
-/* Flip Card */
 .flip-card {
-  background-color: transparent;
-  width: 100%;
+  width: 200px; /* largura fixa ou ajustada */
   height: 200px;
   perspective: 1000px;
 }
@@ -2347,7 +2345,6 @@
     object-fit: cover;
     border-radius: 8px;
     }
-/* Responsividade */
 @media (max-width: 768px) {
   .flip-cards-container {
     display: flex;
@@ -2355,15 +2352,15 @@
     scroll-snap-type: x mandatory;
     gap: 16px;
     padding: 0 16px;
+    justify-content: flex-start; /* no mobile, deixa alinhado à esquerda para rolagem */
   }
 
   .flip-card {
-    min-width: 180px;
+    width: 180px;
     height: 180px;
-    scroll-snap-align: start;
     flex: 0 0 auto;
   }
-}  
+} 
 
     /* Thumbnail com imagem de fundo e botão play */
         .video-thumbnail {
