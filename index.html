@@ -1,0 +1,4649 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <title>Português para Estrangeiros - Unidade 6</title>
+</head>
+<style>
+    /* Global styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Oculta rolagem horizontal */
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .titulo-programa {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 70px;
+            color: #003974;
+            font-weight: lighter;
+        }
+
+        .titulo-materia {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 133px;
+            color: #003974;
+            font-weight: lighter;
+        }
+
+        .subtitulo-professor {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 59px;
+            color: #0058B4;
+            font-weight: lighter;
+        }
+
+        .titulo-unidade {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 60px;
+        }
+
+        .titulo-saiba-mais {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 70px;
+        }
+        /* Estilização de Bebas Neue FIM */
+
+
+        /* Estilização de Roboto INICIO */
+        .peso-1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 45px;
+        }
+
+        .texto {
+            font-family: 'Roboto', sans-serif;
+            font-size: 35px;
+        }
+
+        .sub-texto {
+            font-family: 'Roboto', sans-serif;
+            font-size: 25px;
+        }
+
+        .titulo-box {
+            font-family: 'Roboto', sans-serif;
+            font-size: 32px;
+        }
+
+        .fonte {
+            font-family: 'Roboto', sans-serif;
+            font-size: 25px;
+        }
+
+        .citacao {
+            font-family: 'Roboto', sans-serif;
+            font-size: 30px;
+            font-style: italic;
+        }
+
+        .referencias {
+            font-family: 'Roboto', sans-serif;
+            font-size: 35px;
+        }
+
+        /* Estilização de Roboto FIM */
+        /* Navbar styles INICIO */
+        .navbar {
+            background-color: #134969;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            position: -webkit-sticky; /* Para navegadores antigos */
+            position: sticky; /* Para manter no topo durante o scroll */
+            top: 0; /* Faz com que a navbar fique no topo */
+            z-index: 10; /* Garante que o menu fique acima de outros elementos */
+            transition: background-color 0.3s ease; /* Transição suave para o efeito */
+        }
+
+        .navbar .logo img {
+            height: 50px;/* Ajuste conforme necessário */
+            width: auto;
+        }
+
+        .navbar .menu-toggle {
+            cursor: pointer;
+            font-size: 1.5em;
+            display: block;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: none;
+            flex-direction: column;
+            background-color: #134969;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 220px;
+            max-height: 80vh;
+            overflow-y: auto;
+            border-radius: 5px;
+            z-index: 10;
+            scrollbar-width: thin;
+            scrollbar-color: #fff #134969;
+        }
+        @media (max-width: 400px) {
+            .navbar ul li {
+                padding: 8px;
+                font-size: 0.9em;
+            }
+        }
+        .navbar ul.show {
+            display: flex;
+        }
+
+        .navbar ul li {
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .navbar ul li a:hover {
+            color: #133869; /* Cor ao passar o mouse */
+        }
+        .navbar .menu-toggle i:last-child {
+            display: none; /* Esconde o ícone de fechar inicialmente */
+        }
+        /* Para Chrome, Edge e Safari */
+        .navbar ul::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .navbar ul::-webkit-scrollbar-thumb {
+            background-color: #fff;
+            border-radius: 3px;
+        }
+
+        .navbar ul::-webkit-scrollbar-track {
+            background-color: #9f43be;
+        }
+
+
+         /* Navbar styles FIM */
+
+        /* Titulo styles INICIO */
+        .titulo-intro {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .titulo-intro h1 {
+            margin: 0;
+            padding: 15px;
+        }
+        /* Titulo styles FIM */
+
+        /* Estilo da Capa do Livro INICIO*/
+        .capa-livro {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .capa-livro::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://res.cloudinary.com/di4ria1pf/image/upload/v1744829642/jf8ihsql9tactxny2lhc.png');
+            background-size: cover; /* preenche tudo */
+            background-position: bottom center; /* mostra mais da parte inferior */
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            opacity: 0.5; /* ou ajuste se quiser efeito */
+            z-index: -1;
+            /* Ajuste de transparência */
+            filter: brightness(0.9); /* Escurece levemente a imagem para maior contraste do texto */
+        }
+
+        
+
+        .capa-livro .conteudo-capa {
+            text-align: center;
+            color: white;
+            padding: 20px; /* Espaço interno para o texto */
+        }
+        
+        .capa-livro .titulo-materia {
+            font-size: 80px;
+            font-family: 'Bebas Neue', cursive;
+            margin: 0;
+        }
+
+        .capa-livro .subtitulo-professor {
+            font-size: 40px;
+            font-family: 'Bebas Neue', cursive;
+            margin: 10px 0 0;
+        }
+        @media (max-width: 768px) {
+            .capa-livro::before {
+                background-attachment: scroll; /* remove o parallax */
+                background-position: center center; /* centraliza a imagem */
+            }
+
+            .capa-livro {
+                height: auto; /* deixa o conteúdo definir a altura */
+            }
+
+            .capa-livro .titulo-materia {
+                font-size: 48px;
+            }
+
+            .capa-livro .subtitulo-professor {
+                font-size: 24px;
+            }
+            }
+
+        /* Estilo da Capa do Livro FIM*/
+
+        /* Barra Superior */
+        .barra-superior {
+            background-color: #134969; /* Cor verde escuro */
+            width: 100%;
+            padding: 15px 15px;
+            text-align: center;
+            box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+            overflow-x: hidden; /* Previne rolagem horizontal */
+        }
+
+        .barra-superior .titulo-barra {
+            font-family: 'Bebas Neue', cursive;
+            color: #FFF; /* Cor branca */
+            font-size: 50px;
+            font-weight: lighter;
+            margin: 0;
+        }
+
+        /* Conteúdo da Introdução */
+        .introducao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            overflow-x: hidden; /* Impede rolagem horizontal */
+            border-bottom: 2px solid #134969;
+        }
+        
+        .introducao .titulo-introducao {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            font-weight: lighter;
+            color: #134969; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+
+        .introducao .caixa-texto {
+            width: 100%;
+            background-color: #809dae70; /* Verde mais claro */
+            padding: 64px 0;
+        }
+                /* Conteúdo centralizado dentro da faixa */
+        .introducao .conteudo-centralizado {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Parágrafos da introdução */
+        .introducao .conteudo-centralizado p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* RESPONSIVIDADE SEÇÕES ACIMA*/
+        /* Capa do Livro - Responsividade */
+        @media (max-width: 768px) {
+            .capa-livro {
+                height: 70vh; /* Reduz a altura da capa */
+            }
+            .capa-livro::before {
+                background-position: center center; /* centraliza melhor no mobile */
+            }
+            .capa-livro .titulo-materia {
+                font-size: 40px; /* Reduz o tamanho do título */
+            }
+
+            .capa-livro .subtitulo-professor {
+                font-size: 24px; /* Reduz o tamanho do subtítulo */
+            }
+            .capa-livro .titulo-programa {
+                font-size: 18px;
+            }
+            .capa-livro .conteudo-capa {
+                padding: 15px; /* Ajusta o padding para telas menores */
+            }
+        }   
+            /* Seção Introdução - Responsividade */
+        @media (max-width: 768px) {
+            .barra-superior {
+                padding: 10px; /* Reduz o padding da barra */
+            }
+
+            .barra-superior .titulo-barra {
+                font-size: 1.8rem; /* Reduz o tamanho do título na barra */
+            }
+
+            .introducao .titulo-introducao {
+                font-size: 2.8rem; /* Reduz o tamanho do título da introdução */
+                margin-top: 20px; /* Ajusta o espaçamento superior */
+            }
+
+            .introducao .caixa-texto {
+                padding: 20px; /* Reduz o padding da caixa de texto */
+                width: 100%; /* Ajusta a largura da caixa */
+            }
+
+            .introducao .caixa-texto p {
+                font-size: 1.2rem; /* Reduz o tamanho do texto */
+                line-height: 1.4;
+                margin-bottom: 10px; /* Ajusta a margem entre os parágrafos */
+            }
+        }
+        /* Responsividade para o título da seção de Programa */
+        @media (max-width: 768px) {
+            .titulo-programa {
+                font-size: 50px; /* Ajuste do tamanho do título */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .titulo-programa {
+                font-size: 35px; /* Ajuste para telas muito pequenas */
+            }
+        }
+        /* Estilo base da seção */
+        .secao1 .conteudo-secao {
+            width: 100% !important;
+            padding: 64px 0 !important; /* padding vertical conforme solicitado */
+            box-sizing: border-box !important;
+        }
+        .secao1 .acordeon-container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .secao1 .tabs-section {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        /* Estilo base da seção */
+        .secao1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            background-color: #b9e5a92c;
+            border-bottom: 3px solid #92d678;
+        }
+        .secao1 .outer-container-alt {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+       }
+       .secao1 .outer-container-altv {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+       }
+        /* Imagem de topo */
+        .secao1 .imagem-topo {
+            width: 100%;
+            height: auto;
+            max-height: 290px; /* ajuste essa altura conforme necessário */
+            object-fit: cover; /* garante que a imagem preencha sem distorcer */
+            display: block;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF;
+        }
+
+        /* Faixa verde */
+        .secao1 .faixa-verde {
+            width: 100%;
+            background-color: #b9e5a9;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: left;
+        }
+
+        .secao1 .faixa-verde .titulo-secao {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #015A42; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        .secao1 .titulo-verde {
+            font-size: 20px;
+            font-family: 'Roboto', sans-serif;
+            color: #015A42; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        /* Parágrafo padrão */
+        .secao1 p {
+            font-size: 19px;
+            font-family: 'Roboto', sans-serif;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+                 
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .secao1 .faixa-verde .titulo-secao {
+                font-size: 20px;
+            }
+
+            .secao1 p {
+                font-size: 1rem;
+            }
+            .secao1 .imagem-topo {
+                max-height: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .secao1 .faixa-verde .titulo-secao {
+                font-size: 20px;
+            }
+
+            .secao1 p {
+                font-size: 0.95rem;
+            }
+        }
+
+        /* Estilo base da seção */
+        .secao2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            background-color: #3a96a61c;
+            border-bottom: 3px solid #3a95a6;
+        }
+        .secao2 .conteudo-secao {
+            width: 100%;
+            padding: 64px 0;
+            box-sizing: border-box;
+        }
+        .secao2 .acordeon-container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+       .secao2 .outer-container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+       }
+        /* Imagem de topo */
+        .secao2 .imagem-topo {
+            width: 100%;
+            height: auto;
+            max-height: 290px; /* ajuste essa altura conforme necessário */
+            object-fit: cover; /* garante que a imagem preencha sem distorcer */
+            display: block;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF;
+        }
+
+        /* Faixa verde */
+        .secao2 .faixa-verde {
+            width: 100%;
+            background-color: #3a95a6;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: left;
+        }
+
+        .secao2 .faixa-verde .titulo-secao {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #FFF; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        .secao2 .titulo-verde {
+            font-size: 20px;
+            font-family: 'Roboto', sans-serif;
+            color: #3a95a6; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        /* Parágrafo padrão */
+        .secao2 p {
+            font-size: 19px;
+            font-family: 'Roboto', sans-serif;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+                 
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .secao2 .faixa-verde .titulo-secao {
+                font-size: 30px;
+            }
+
+            .secao2 p {
+                font-size: 1rem;
+            }
+            .secao2 .imagem-topo {
+                max-height: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .secao2 .faixa-verde .titulo-secao {
+                font-size: 24px;
+            }
+
+            .secao2 p {
+                font-size: 0.95rem;
+            }
+        }
+        /* Estilo base da seção */
+        .secao4 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            background-color: #809dae70;
+            border-bottom: 3px solid #134969;
+        }
+        .secao4 .outer-container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+       }
+        .secao4 .acordeon-container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .secao4 .outer-container-altv {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+       }
+        .secao4 .conteudo-secao {
+            width: 100% !important;
+            padding: 64px 0 !important; /* padding vertical conforme solicitado */
+            box-sizing: border-box !important;
+        }
+        .secao4 .titulo-azul {
+            font-size: 20px;
+            font-family: 'Roboto', sans-serif;
+            color: #134969; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        /* Imagem de topo */
+        .secao4 .imagem-topo {
+            width: 100%;
+            height: auto;
+            max-height: 290px; /* ajuste essa altura conforme necessário */
+            object-fit: cover; /* garante que a imagem preencha sem distorcer */
+            display: block;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF;
+        }
+
+        /* Faixa verde */
+        .secao4 .faixa-verde {
+            width: 100%;
+            background-color: #134969;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: left;
+        }
+
+        .secao4 .faixa-verde .titulo-secao {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #FFF; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        .secao4 .titulo-verde {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #b9e5a9; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        /* Parágrafo padrão */
+        .secao4 p {
+            font-size: 19px;
+            font-family: 'Roboto', sans-serif;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+                 
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .secao4 .faixa-verde .titulo-secao {
+                font-size: 30px;
+            }
+
+            .secao4 p {
+                font-size: 1rem;
+            }
+            .secao4 .imagem-topo {
+                max-height: 180px;
+            }
+            .secao4 .titulo-azul {
+                font-size: 1.2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .secao4 .faixa-verde .titulo-secao {
+                font-size: 24px;
+            }
+
+            .secao4 p {
+                font-size: 0.95rem;
+            }
+        }
+        .secao1 .topicos-destacados {
+            margin-left: 40px;
+            padding-left: 20px;
+            width: 85%;
+        }
+
+        .secao1 .topicos-destacados p {
+            font-size: 19px;
+            font-family: 'Roboto', sans-serif;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 12px;
+        }
+        .secao1 .topicos-destacados {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .secao1 .topico-texto {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .secao4 .topicos-destacados {
+            margin-left: 40px;
+            padding-left: 20px;
+            width: 85%;
+        }
+
+        .secao4 .topicos-destacados p {
+            font-size: 19px;
+            font-family: 'Roboto', sans-serif;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 12px;
+        }
+        .secao4 .topicos-destacados {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+         .slider-texto-container {
+            position: relative;
+            width: 90%;
+            max-width: 600px;
+            margin: 20px auto;
+            border: 2px solid #3a95a6;
+            padding: 20px 30px;
+            box-sizing: border-box;
+            overflow: hidden;
+            background-color: #FFF;
+            border-radius: 8px;
+        }
+        .slider-texto-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+
+        .slide-texto {
+            display: none;
+            flex-shrink: 0;
+            width: 100%;
+            text-align: center;
+            word-break: keep-all;
+            white-space: normal;
+            
+        }
+
+        .slide-texto.ativo {
+            display: block;
+        }
+
+        .titulo-texto {
+            color: #b9e5a9;
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-family: 'Roboto', sans-serif;
+            width: 100%;
+        }
+
+        .conteudo-texto {
+            font-size: 16px !important;
+            color: #333 !important;
+            font-family: 'Roboto', sans-serif !important;
+            width: 100%;
+            margin: 0 auto;
+            word-break: normal;
+            white-space: normal;
+            text-align: center !important;
+        }
+        .titulo-texto,
+        .conteudo-texto {
+            word-break: break-word;
+            white-space: normal;
+        }
+        .seta-texto {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            border: none;
+            font-size: 30px;
+            color: #3a95a6;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 10;
+        }
+
+        .seta-texto.esquerda {
+            left: 0;
+        }
+
+        .seta-texto.direita {
+            right: 0;
+        }
+
+    @media (max-width: 768px) {
+        .titulo-texto {
+            font-size: 20px;
+        }
+
+        .conteudo-texto {
+            font-size: 18px;
+        }
+
+        .seta-texto {
+            font-size: 24px;
+        }
+    }
+        .slider-texto-indicadores {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .dot-texto {
+            height: 12px;
+            width: 12px;
+            margin: 0 6px;
+            background-color: #ccc;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .dot-texto.ativo {
+            background-color: #3a95a6;
+        }
+        /* ------------------- */
+        /* TEMAS DE COR        */
+        /* ------------------- */
+
+        /* Tema verde */
+        .tema-verde {
+            border-color: #92d678;
+        }
+        .tema-verde .seta-texto {
+            color: #92d678;
+        }
+        .tema-verde .dot-texto.ativo {
+            background-color: #92d678;
+        }
+
+        /* Tema roxo */
+        .tema-roxo {
+            border-color: #134969;
+        }
+        .tema-roxo .seta-texto {
+            color: #134969;
+        }
+        .tema-roxo .dot-texto.ativo {
+            background-color: #134969;
+        }
+
+        /* Tema roxo */
+        .tema-green {
+            border-color: #92d678;
+        }
+        .tema-green .seta-texto {
+            color: #92d678;
+        }
+        .tema-green .dot-texto.ativo {
+            background-color: #92d678;
+        }
+
+        .slide-conteudo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            justify-content: center;
+            text-align: left;
+        }
+
+        .slide-conteudo img {
+            max-width: 120px;
+            height: auto;
+            flex-shrink: 0;
+            border-radius: 6px;
+        }
+
+        @media (max-width: 600px) {
+            .slide-conteudo {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .slide-conteudo img {
+                max-width: 80%;
+            }
+        }
+
+        .slider-texto-container {
+            position: relative;
+            width: 90%;
+            max-width: 600px;
+            margin: 20px auto;
+            border: 2px solid #3a95a6;
+            padding: 20px 30px;
+            box-sizing: border-box;
+            overflow: hidden;
+            background-color: #FFF;
+            border-radius: 8px;
+        }
+        .slider-texto-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+
+        .slide-texto {
+            display: none;
+            flex-shrink: 0;
+            width: 100%;
+            text-align: center;
+            word-break: keep-all;
+            white-space: normal;
+            
+        }
+
+        .slide-texto.ativo {
+            display: block;
+        }
+
+        .titulo-texto {
+            color: #b9e5a9;
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-family: 'Roboto', sans-serif;
+            width: 100%;
+        }
+
+        .conteudo-texto {
+            font-size: 16px !important;
+            color: #333 !important;
+            font-family: 'Roboto', sans-serif !important;
+            width: 100%;
+            margin: 0 auto;
+            word-break: normal;
+            white-space: normal;
+            text-align: center !important;
+        }
+        .titulo-texto,
+        .conteudo-texto {
+            word-break: break-word;
+            white-space: normal;
+        }
+        .seta-texto {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            border: none;
+            font-size: 30px;
+            color: #3a95a6;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 10;
+        }
+
+        .seta-texto.esquerda {
+            left: 0;
+        }
+
+        .seta-texto.direita {
+            right: 0;
+        }
+
+    @media (max-width: 768px) {
+        .titulo-texto {
+            font-size: 20px;
+        }
+
+        .conteudo-texto {
+            font-size: 18px;
+        }
+
+        .seta-texto {
+            font-size: 24px;
+        }
+    }
+        .slider-texto-indicadores {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .dot-texto {
+            height: 12px;
+            width: 12px;
+            margin: 0 6px;
+            background-color: #ccc;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .dot-texto.ativo {
+            background-color: #3a95a6;
+        }
+        /* ------------------- */
+        /* TEMAS DE COR        */
+        /* ------------------- */
+
+        /* Tema verde */
+        .tema-verde {
+            border-color: #92d678;
+        }
+        .tema-verde .seta-texto {
+            color: #92d678;
+        }
+        .tema-verde .dot-texto.ativo {
+            background-color: #92d678;
+        }
+
+        /* Tema roxo */
+        .tema-roxo {
+            border-color: #134969;
+        }
+        .tema-roxo .seta-texto {
+            color: #134969;
+        }
+        .tema-roxo .dot-texto.ativo {
+            background-color: #134969;
+        }
+
+        /* Tema roxo */
+        .tema-green {
+            border-color: #92d678;
+        }
+        .tema-green .seta-texto {
+            color: #92d678;
+        }
+        .tema-green .dot-texto.ativo {
+            background-color: #92d678;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .seta-texto { font-size: 24px; }
+            .conteudo-texto { font-size: 18px; }
+        }
+        /* Acordeon styles */
+        .acordeon-container {
+            margin-top: 20px;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        .acordeon {
+            border-radius: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .acordeon-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #3a95a6;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 17px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .acordeon-headerb {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #134969;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 17px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .acordeon-headerc {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #b9e5a9;
+            color: #015A42;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 17px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .acordeon-headerd {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #134969; /* exemplo: laranja suave */
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 17px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .acordeon-content {
+            display: none;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            padding-top: 0; /* Remove padding para que o header toque no conteúdo */
+            border: 2px solid #3a95a6;
+            border-radius: 0 0 10px 10px; /* Apenas canto inferior arredondado */
+        }
+
+        .acordeon-contentb {
+            display: none;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            padding-top: 0; /* Remove padding para que o header toque no conteúdo */
+            border: 2px solid #134969;
+            border-radius: 0 0 10px 10px; /* Apenas canto inferior arredondado */
+        }
+
+        .acordeon-contentc {
+            display: none;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            padding-top: 0; /* Remove padding para que o header toque no conteúdo */
+            border: 2px solid #b9e5a9;
+            border-radius: 0 0 10px 10px; /* Apenas canto inferior arredondado */
+        }
+
+        .acordeon-contentd {
+            display: none;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            padding-top: 0; 
+            border: 2px solid #134969; /* mesma cor da header para consistência */
+            border-radius: 0 0 10px 10px; 
+        }
+
+        .acordeon-content p {
+            margin: 20px auto;
+            font-size: 16px;
+        }
+        .acordeon-contentb p {
+            margin: 20px auto;
+            font-size: 16px;
+        }
+        .acordeon-contentc p {
+            margin: 20px auto;
+            font-size: 16px;
+        }
+        .acordeon-contentc h4 {
+            text-align: center;
+
+        }
+        .acordeon-contentd p {
+            margin: 20px auto;
+            font-size: 16px;
+        }
+        .tituloacordeonverde{
+            color: #015A42;
+        }
+            /* Estilo do ícone da seta */
+        .acordeon-icon {
+            font-size: 40px;
+            transition: transform 0.3s ease; /* Para rotação suave */
+        }
+            
+            /* Rotação da seta para cima */
+        .acordeon-header.active .acordeon-icon {
+            transform: rotate(180deg); /* Gira a seta para cima */
+        }
+        /* Rotação da seta para cima */
+        .acordeon-headerb.active .acordeon-icon {
+            transform: rotate(180deg); /* Gira a seta para cima */
+        }
+        /* Rotação da seta para cima */
+        .acordeon-headerc.active .acordeon-icon {
+            transform: rotate(180deg); /* Gira a seta para cima */
+        }
+                /* Ícone giratório */
+        .acordeon-headerd.active .acordeon-icon {
+            transform: rotate(180deg);
+        }
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .acordeon-header {
+                font-size: 20px; /* Reduzir tamanho do texto */
+                padding: 12px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 30px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-content {
+                font-size: 14px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 10px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-content p {
+                margin: 15px; /* Ajustar margem para menor espaçamento */
+            }
+            .acordeon-headerb {
+                font-size: 20px; /* Reduzir tamanho do texto */
+                padding: 12px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 30px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-contentb {
+                font-size: 14px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 10px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-contentb p {
+                margin: 15px; /* Ajustar margem para menor espaçamento */
+            }
+
+            .acordeon-headerc {
+                font-size: 20px; /* Reduzir tamanho do texto */
+                padding: 12px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 30px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-contentc {
+                font-size: 14px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 10px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-contentc p {
+                margin: 15px; /* Ajustar margem para menor espaçamento */
+            }
+            .acordeon-headerd {
+                font-size: 20px;
+                padding: 12px;
+            }
+
+            .acordeon-contentd {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .acordeon-contentd p {
+                margin: 15px;
+            }
+        }
+        /* Responsividade para telas menores ainda (480px) */
+        @media (max-width: 480px) {
+            .acordeon-header {
+                font-size: 16px; /* Reduz ainda mais o tamanho do texto */
+                padding: 10px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 25px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-content {
+                font-size: 13px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 8px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-content p {
+                margin: 10px; /* Ajustar margem para menor espaçamento */
+                font-size: 19px;
+            }
+            .acordeon-headerb {
+                font-size: 16px; /* Reduz ainda mais o tamanho do texto */
+                padding: 10px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 25px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-contentb {
+                font-size: 13px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 8px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-contentb p {
+                margin: 10px; /* Ajustar margem para menor espaçamento */
+                font-size: 19px;
+            }
+
+            .acordeon-headerc {
+                font-size: 16px; /* Reduz ainda mais o tamanho do texto */
+                padding: 10px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 25px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-contentc {
+                font-size: 13px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 8px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-contentc p {
+                margin: 10px; /* Ajustar margem para menor espaçamento */
+                font-size: 19px;
+            }
+            .acordeon-headerd {
+                font-size: 16px;
+                padding: 10px;
+            }
+
+            .acordeon-contentd {
+                font-size: 13px;
+                padding: 8px;
+            }
+
+            .acordeon-contentd p {
+                margin: 10px;
+                font-size: 19px;
+            }
+        }
+            /* Acordeon styles FIM */
+
+        /* Seção geral */
+        .tabs-section {
+            max-width: 800px;
+            margin: 40px auto;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Cabeçalho das tabs */
+        .tabs-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 0;
+            background-color: transparent;
+            margin-bottom: 0;
+            position: relative;
+        }
+
+        /* Botões de cada aba */
+        .tab-btn {
+            background-color: #b9e5a9;
+            color: #FFF;
+            border: 2px solid #b9e5a9;
+            border-bottom: none;
+            padding: 12px 20px;
+            margin: 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            min-width: 120px;
+            white-space: nowrap;
+            /* NOVO: Impede que o botão mude de tamanho */
+            flex: 0 0 auto;
+            width: auto;
+        }
+        /* Botões de cada aba */
+        .tab-btnb {
+            background-color: #134969;
+            color: #FFF;
+            border: 2px solid #134969;
+            border-bottom: none;
+            padding: 12px 20px;
+            margin: 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            min-width: 120px;
+            white-space: nowrap;
+            /* NOVO: Impede que o botão mude de tamanho */
+            flex: 0 0 auto;
+            width: auto;
+        }
+
+        /* Botões de cada aba */
+        .tab-btnc {
+            background-color: #b9e5a9;
+            color: #FFF;
+            border: 2px solid #b9e5a9;
+            border-bottom: none;
+            padding: 12px 20px;
+            margin: 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            min-width: 120px;
+            white-space: nowrap;
+            /* NOVO: Impede que o botão mude de tamanho */
+            flex: 0 0 auto;
+            width: auto;
+        }
+        /* Hover melhorado */
+        .tab-btn:hover {
+            background-color: #b9e5a9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .tab-btnb:hover {
+            background-color: #134969;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        .tab-btnc:hover {
+            background-color: #b9e5a9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Estado ativo OTIMIZADO */
+        .tab-btn.ativo {
+            background-color: white;
+            color: #015A42;
+            border-color: #b9e5a9;
+            border-bottom: 2px solid #b9e5a9;
+            z-index: 3;
+            margin-bottom: -2px;
+            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab-btnb.ativo {
+            background-color: white;
+            color: #134969;
+            border-color: #134969;
+            border-bottom: 2px solid #134969;
+            z-index: 3;
+            margin-bottom: -2px;
+            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .tab-btnc.ativo {
+            background-color: white;
+            color:  #015A42;
+            border-color: #b9e5a9;
+            border-bottom: 2px solid #b9e5a9;
+            z-index: 3;
+            margin-bottom: -2px;
+            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+        }
+        /* Focus para acessibilidade */
+        .tab-btn:focus,
+        .tab-btnb:focus,
+        .tab-btnc:focus {
+            outline-offset: 2px;
+        }
+
+        .tab-btn:focus-visible,
+        .tab-btnb:focus-visible,
+        .tab-btnc:focus-visible {
+            box-shadow: 0 0 0 3px rgba(58, 149, 166, 0.3);
+        }
+        /* Conteúdo das tabs - VERSÃO OTIMIZADA COM ALTURA FIXA */
+        .tabs-content {
+            border: 2px solid #b9e5a9;
+            border-radius: 0 8px 8px 8px;
+            background-color: white;
+            padding: 20px;
+            display: none;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* NOVO: Define altura mínima fixa para evitar "dança" dos botões */
+            min-height: 150px;
+            /* NOVO: Garante que o container mantenha tamanho consistente */
+            box-sizing: border-box;
+        }
+
+        .tabs-contentb {
+            border: 2px solid #134969;
+            border-radius: 0 8px 8px 8px;
+            background-color: white;
+            padding: 20px;
+            display: none;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* NOVO: Define altura mínima fixa para evitar "dança" dos botões */
+            min-height: 150px;
+            /* NOVO: Garante que o container mantenha tamanho consistente */
+            box-sizing: border-box;
+        }
+        .tabs-contentc {
+            border: 2px solid #b9e5a9;
+            border-radius: 0 8px 8px 8px;
+            background-color: white;
+            padding: 20px;
+            display: none;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* NOVO: Define altura mínima fixa para evitar "dança" dos botões */
+            min-height: 150px;
+            /* NOVO: Garante que o container mantenha tamanho consistente */
+            box-sizing: border-box;
+        }
+        /* Estados ativos do conteúdo */
+        .tabs-content.ativo,
+        .tabs-contentb.ativo,
+        .tabs-contentc.ativo  {
+            display: block;
+        }
+
+        .tab-content {
+            display: none;
+            line-height: 1.6;
+            color: #374151;
+            /* NOVO: Garante que o conteúdo não force expansão */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+
+        .tab-content.ativo {
+            display: block;
+        }
+
+        /* Estilização do conteúdo interno */
+        .tab-content p {
+            margin-bottom: 12px;
+        }
+
+        .tab-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .tab-content strong {
+            color: #000;
+        }
+
+        /* Remove o ::after antigo */
+        .tab-btn.ativo::after,
+        .tab-btnb.ativo::after {
+            display: none;
+        }
+
+        /* Regras de ocultação otimizadas */
+        .tab-content:not(.ativo),
+        .tabs-content:not(.ativo),
+        .tabs-contentb:not(.ativo) {
+            display: none;
+        }
+
+        /* Responsividade melhorada */
+        @media screen and (max-width: 768px) {
+            .tabs-header {
+                justify-content: center;
+            }
+
+            .tab-btn,
+            .tab-btnb {
+                flex: 1 1 45%;
+                font-size: 13px;
+                padding: 10px 15px;
+                min-width: 100px;
+            }
+
+            /* NOVO: Ajusta altura mínima em mobile */
+            .tabs-content,
+            .tabs-contentb {
+                min-height: 120px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .tab-btn,
+            .tab-btnb {
+                flex: 1 1 100%;
+                font-size: 14px;
+                padding: 12px 16px;
+                margin-bottom: 5px;
+            }
+
+            .tabs-content,
+            .tabs-contentb {
+                padding: 16px;
+                border-radius: 8px;
+                /* NOVO: Altura mínima menor em telas muito pequenas */
+                min-height: 100px;
+            }
+
+            .tabs-section {
+                margin: 20px auto;
+                padding: 0 10px;
+            }
+        }
+
+        /* Melhorias extras para UX */
+        @media (prefers-reduced-motion: reduce) {
+            .tab-btn,
+            .tab-btnb {
+                transition: none;
+            }
+        }
+
+        /* Estado de carregamento (opcional) */
+        .tabs-section.loading .tab-btn,
+        .tabs-section.loading .tab-btnb {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        /* NOVO: Se você quiser uma altura específica para cada grupo */
+        #grupo-tabs-c .tabs-content {
+            min-height: 180px; /* Ajuste conforme necessário */
+        }
+
+        #grupo-tabs-d .tabs-content {
+            min-height: 160px; /* Ajuste conforme necessário */
+        }
+
+        /* Estilo para os tópicos de texto */
+        .topico-texto {
+            width: 90%;
+            max-width: 800px;
+            padding: 10px;
+        }
+
+        .topico-texto p {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .topico-texto ul {
+            list-style: none; /* Remove marcadores padrão */   
+        }
+
+        .topico-texto ul li {
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            display: flex;
+            align-items: flex-start; /* Alinha o texto com o ícone */
+            white-space: pre-wrap; /* Preserva espaços e quebras de linha */
+            flex-direction: column;
+            margin: 20px auto;
+        }
+        /* Subitens */
+        .subitens {
+            padding-left: 25px; /* Indentação para subitens */
+        }
+
+        .subitens li {
+            display: list-item;
+            list-style-type: disc; /* Aparece como bolinha • */
+            color: #444;
+            font-size: 15px;
+        }
+                .topico-destaque {
+            font-size: 18px; /* Aumente o tamanho conforme a necessidade */
+            font-weight: 400;
+            padding: 5px 0;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .topico-texto {
+                padding: 15px;
+            }
+
+            .topico-texto p {
+                font-size: 16px;
+            }
+
+            .topico-texto ul li {
+                font-size: 14px;
+            }
+        }
+         /* Título do Slider */
+        .slider-quadrinhos .titulo-slider {
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #333;
+        
+        }
+
+        .slider-quadrinhos .titulo-slider .figura {
+            color: #015A42;
+        }
+        /* Modal - Fundo escuro ao abrir a imagem */
+        .modal {
+            display: none; /* Escondido por padrão */
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Imagem no modal */
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            display: block;
+            margin: auto;
+            border-radius: 8px;
+        }
+
+        /* Botão de fechar */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .modal-imagem {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .modal-imagem.ativo {
+            display: flex;
+        }
+
+        .imagem-modal {
+            max-width: 90%;
+            max-height: 80%;
+            margin-bottom: 20px;
+        }
+
+        .fechar {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .seta-modal {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .seta-modal.esquerda {
+            left: 20px;
+        }
+
+        .seta-modal.direita {
+            right: 20px;
+        }
+
+        .indicador-contador {
+            color: white;
+            font-size: 18px;
+            margin-bottom: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 6px 12px;
+            border-radius: 15px;
+        }
+
+        .indicador-pontos {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .indicador-pontos span {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.3);
+            cursor: pointer;
+        }
+
+        .indicador-pontos span.ativo {
+            background-color: white;
+        }
+
+        /* Container do slider */
+        .slider-container {
+            position: relative;
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 2px solid #b9e5a9;
+            overflow: hidden;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+        }
+
+        /* Imagens do slider */
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide {
+            display: none;
+            max-width: 100%;
+            max-height: 600px;
+            margin: 0 auto;
+            border-radius: 10px;
+            object-fit: contain;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide.ativo {
+            display: block;
+        }
+
+        /* Setas */
+        .seta {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            border: none;
+            font-size: 30px;
+            color: #b9e5a9;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 10;
+        }
+
+        .seta.esquerda {
+            left: 0;
+        }
+
+        .seta.direita {
+            right: 0;
+        }
+
+            /* Responsivo */
+        @media (max-width: 768px) {
+            .slider-container {
+                padding: 15px;
+            }
+
+            .slide {
+                max-width: 100%;
+                max-height: 350px;
+            }
+
+            .seta {
+                font-size: 24px;
+            }
+
+            .slider-quadrinhos .titulo-slider {
+                font-size: 18px;
+            }
+        }
+        /* === Tema Verde (Padrão) === */
+    .slider-quadrinhos.tema-verde .titulo-slider .figura {
+        color: #015A42;
+    }
+
+    .slider-quadrinhos.tema-verde .slider-container {
+        border: 2px solid #b9e5a9;
+        background-color: #fff;
+    }
+
+    .slider-quadrinhos.tema-verde .seta {
+        color: #b9e5a9;
+    }
+
+    .slider-quadrinhos.tema-verde .slider-indicadores .dot.ativo {
+        background-color: #b9e5a9;
+    }
+
+
+    /* === Tema Azul (Novo) === */
+    .slider-quadrinhos.tema-azul .titulo-slider .figura {
+        color: #004A99;
+    }
+
+    .slider-quadrinhos.tema-azul .slider-container {
+        border: 2px solid #134969;
+        background-color: #f9fbff;
+    }
+
+    .slider-quadrinhos.tema-azul .seta {
+        color: #134969;
+    }
+
+    .slider-quadrinhos.tema-azul .slider-indicadores .dot.ativo {
+        background-color: #134969;
+    } 
+                /* Indicadores de slide (bolinhas) */
+        .slider-indicadores {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .slider-indicadores .dot {
+            height: 12px;
+            width: 12px;
+            margin: 0 6px;
+            background-color: #ccc;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .slider-indicadores .dot.ativo {
+            background-color: #b9e5a9;
+        }
+        .fonte-imagem {
+            font-size: 12px !important;
+            color: #555;
+            display: flex;
+            justify-content: center;
+            margin-top: 5px;
+            max-width: 500px;
+        }
+        .fonte-tabela {
+            font-size: 12px !important;
+            color: #000 !important;
+            display: flex;
+            justify-content: left;
+            margin-top: -15px !important;
+            font-style: italic;
+        }
+        @media (max-width: 768px){
+            .fonte-tabela {
+                margin-top: -5px !important;
+                font-size: 12px !important;
+                color: #333 !important;
+            }
+        }
+        .fonte-quadro {
+            font-size: 12px !important;
+            font-style: italic !important;
+            text-align: center !important;
+            color: #555 !important; /* tom discreto */
+        }
+        .text-italic {
+            font-style: italic;
+        }
+        .outer-container {
+        padding: 10px;
+        border: 2px solid #3a95a6;
+        border-radius: 10px;
+        background-color: #3a96a60a;
+        width: fit-content;
+    }
+    .outer-container-alt {
+        padding: 10px;
+        border: 2px solid #92d678; 
+        border-radius: 10px;
+        background-color: #b9e5a917; 
+        width: fit-content;
+        }
+    .outer-container-altv {
+        padding: 10px;
+        border: 2px solid #92d678;  
+        border-radius: 10px;
+        background-color: #b9e5a910;
+        width: fit-content;
+        }
+    .inner-container-alt {
+        padding: 20px;
+        border: 2px solid #92d678; 
+        border-radius: 10px;
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .inner-container-altv {
+    padding: 20px;
+    border: 2px solid #92d678; 
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row-reverse; /* Inverte: imagem à direita */
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Ajuste mobile: volta para coluna normal */
+@media (max-width: 768px) {
+    .inner-container-altv {
+        flex-direction: column;
+    }
+}
+
+        .figure-title-alt {
+        font-weight: bold;
+        color: #015A42; /* tom vinho mais forte */
+    }
+    
+    .inner-container {
+        padding: 20px;
+        border: 2px solid #3a95a6;
+        border-radius: 10px;
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .image-section {
+        flex: 1 1 220px; /* Permite um pouco mais de largura, mas flexível */
+        max-width: 250px;
+        text-align: left;
+    }
+
+    .image-section img {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    display: block;
+    }
+
+    .figure-title {
+        font-weight: bold;
+        color: #015A42;
+    }
+
+    .image-caption {
+        font-size: 12px;
+        color: #444;
+        font-style: italic;
+    }
+
+    .image-caption a {
+        color: #444;
+        text-decoration: underline;
+    }
+
+    .text-section {
+        max-width: 500px;
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: justify;
+    }
+    .figure-header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        text-align: left;
+        gap: 10px;
+    }
+
+    .figure-subtitle {
+        color: #333;
+    }
+    /* Título dentro do quadro */
+        .titulo-quadrov {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333; /* Verde */
+            margin-top: 50px;
+            font-weight: normal; /* Evita que o título fique em negrito */
+            text-align: center;
+        }
+        .text-greenv{
+            color: #015A42;
+            font-weight: bold;
+        }
+           /* Modal - Fundo escuro ao abrir a imagem */
+        .modal {
+            display: none; /* Escondido por padrão */
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Imagem no modal */
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            display: block;
+            margin: auto;
+            border-radius: 8px;
+        }
+
+        /* Botão de fechar */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .quadroimg {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto; /* Centraliza horizontalmente */
+            box-sizing: border-box;
+        }
+
+        .quadroimg img {
+            max-width: 150%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        @media (max-width: 600px) {
+            .quadroimg {
+                width: 90%;
+                padding: 8px;
+            }
+
+            .quadroimg img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .fonte-imagem {
+                width: 90%;
+                font-size: 11px !important;
+            }
+
+            .titulo-quadrov {
+                font-size: 16px;
+                text-align: center;
+                margin-top: 30px;
+            }
+        }
+        .text-italicu{
+            font-style: italic;
+            text-decoration: underline;
+        }
+/* Contêiner para rolagem horizontal */
+.tabela-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Tabela padrão */
+.tabela-familia {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    min-width: 300px;
+}
+
+.tabela-familia th {
+    background-color: #92d678;
+    color: #fff;
+    text-align: center; /* Centraliza o texto */
+    padding: 10px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    white-space: nowrap;
+}
+
+.tabela-familia td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    white-space: nowrap;
+    text-align: center; /* Centraliza o texto */
+}
+
+.tabela-familia tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+/* Ajuste específico para telas menores que 600px */
+@media (max-width: 600px) {
+    .tabela-familia {
+        font-size: 14px; /* fonte menor */
+    }
+    .tabela-familia th,
+    .tabela-familia td {
+        padding: 6px 8px; /* padding reduzido */
+    }
+    .tabela-familia th {
+        font-size: 14px;
+    }
+}
+
+        /* Container principal */
+.flip-cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Agora sempre serão 4 por linha */
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 16px; /* espaçamento lateral */
+}
+
+/* Flip Card */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  backface-visibility: hidden;
+  border: 2px solid #92d678;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+
+.flip-card-front {
+  background-color: #b9e5a9;
+  color: #015A42;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.flip-card-back {
+  background-color: white;
+  color: #000;
+  transform: rotateY(180deg);
+  font-size: 13px;
+  line-height: 1.4;
+}
+    .flip-card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    }
+/* Responsividade */
+@media (max-width: 768px) {
+  .flip-cards-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 0 16px;
+  }
+
+  .flip-card {
+    min-width: 180px;
+    height: 180px;
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+  }
+}  
+
+    /* Thumbnail com imagem de fundo e botão play */
+        .video-thumbnail {
+            position: relative;
+            width: 90%;
+            max-width: 600px;
+            height: 400px;
+            margin: 20px auto;
+            border: 2px solid #3a95a6;
+            border-radius: 16px;
+            padding: 20px; /* Espaço entre borda e imagem */
+            box-sizing: border-box;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        
+         /* Camada da imagem de fundo */
+        .video-bg {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            right: 30px;
+            bottom: 30px;
+            background-image: url('https://res.cloudinary.com/di4ria1pf/image/upload/v1745434099/k1hkgcwcv7ydys0dxmzu.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 0;
+            overflow: hidden;
+        }       
+         
+        /* Camada de esverdeamento */
+        .video-bg::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #3a96a677;
+            z-index: 1;
+        }
+
+        
+        /* Ícone de play centralizado */
+        .play-icon {
+            z-index: 1;
+            font-size: 90px;
+            color: #fff;
+            background-color: #3a95a6;
+            border-radius: 25%;
+            width: 150px;
+            height: 125px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        
+        .play-icon:hover {
+            transform: scale(1.1);
+        }
+                /* Temas personalizados */
+        .estilo-azul {
+            border-color: #92d678;
+        }
+
+        .estilo-azul .video-bg::after {
+            background-color: #93d678b6;
+        }
+
+        .estilo-azul .play-icon,
+        .estilo-azul .fechar-modal {
+            background-color: #92d678;
+        }
+
+        .estilo-vermelho {
+            border-color: #d94a4a;
+        }
+
+        .estilo-vermelho .video-bg::after {
+            background-color: rgba(217, 74, 74, 0.5);
+        }
+
+        .estilo-vermelho .play-icon,
+        .estilo-vermelho .fechar-modal {
+            background-color: #d94a4a;
+        }
+
+        .estilo-verde {
+            border-color: #4caf50;
+        }
+
+        .estilo-verde .video-bg::after {
+            background-color: rgba(76, 175, 80, 0.5);
+        }
+
+        .estilo-verde .play-icon,
+        .estilo-verde .fechar-modal {
+            background-color: #4caf50;
+        }
+        /* Modal de vídeo */
+        .video-modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.8);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-modal .modal-content {
+            position: relative;
+            background-color: #000;
+            padding: 10px;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        .video-modal iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .fechar-modal {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 30px;
+            color: white;
+            background: #3a95a6;
+            border-radius: 50%;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        
+        .card-horizontal-praticar {
+        border: 2px solid #3a95a6;
+        padding: 10px 15px;
+        background-color: #ffffff2f;
+        max-width: 800px;
+        margin: 20px auto;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+    @media (max-width: 768px) {
+        .card-horizontal-praticar{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+
+    .card-horizontal-praticar-alt {
+        border: 2px solid #92d678;
+        padding: 10px 15px;
+        background-color: #ffffff2f;
+        max-width: 800px;
+        margin: 20px auto;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+   
+    .titulo-praticar {
+        color: #134969;
+        font-size: 35px;
+        border-bottom: 2px solid #3a95a6;
+        padding-bottom: 8px;
+        margin-bottom: 20px;
+        text-align: left !important;
+        font-family: 'Bebas Neue', cursive !important;
+        font-weight: lighter !important;
+    }
+    .titulo-praticar-alt {
+        color: #92d678;
+        font-size: 35px;
+        border-bottom: 2px solid #92d678;
+        padding-bottom: 8px;
+        margin-bottom: 20px;
+        text-align: left !important;
+        font-family: 'Bebas Neue', cursive !important;
+        font-weight: lighter !important;
+    }
+    
+    .texto-praticar {
+        font-size: 18px !important;
+        line-height: 1.6 !important;
+        font-family: 'Roboto', sans-serif !important; 
+        color: #333 !important;
+        margin-bottom: 20px;
+        text-align: justify !important;
+    }
+
+    .imagem-praticar {
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+        display: block;
+    }
+
+    /* ATIVIDADE AGORA É SUA VEZ GENIALLY AZUL */
+        /* Área da atividade */
+        .atividade-sectionb {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #b9e5a910;
+            border: 2px solid #b9e5a9;
+            border-radius: 10px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Cabeçalho com título e imagem */
+        .atividade-headerb {
+            display: flex;
+            justify-content: space-between; /* Agora título na esquerda e imagem na direita */
+            align-items: center;
+            border-bottom: 2px solid #b9e5a9;
+            padding-bottom: 5px;
+        }
+
+        .atividade-headerb h2 {
+            font-family: 'Bebas Neue', cursive;
+            font-weight: normal;
+            color: #015A42;
+            font-size: 35px;
+            margin: 0;
+        }
+
+        .atividade-headerb img {
+            height: 60px;
+        }
+
+        /* Texto abaixo */
+        .atividade-textob {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        /* Imagem clicável centralizada */
+        .atividade-quizz {
+            text-align: center; /* Centraliza o conteúdo interno */
+        }
+
+        .atividade-quizz img {
+            width: 120px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .atividade-quizz img:hover {
+            transform: scale(1.05);
+        }
+        .btn-fechar-quizz {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: #134969;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 22px;
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            z-index: 999;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-fechar-quizz:hover {
+            background-color: #2e7e8e;
+        }
+        @media (max-width: 768px) {
+            .atividade-sectionb {
+                padding: 15px;
+                margin: 20px 10px;
+            }
+
+            .atividade-headerb {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+                text-align: left;
+            }
+
+            .atividade-headerb h2 {
+                font-size: 28px;
+                text-align: left;
+            }
+
+            .atividade-headerb img {
+                height: 50px;
+                align-self: flex-end; /* mantém a imagem à direita se desejar */
+            }
+
+            .atividade-textob {
+                font-size: 15px;
+                text-align: justify;
+            }
+
+            .atividade-quizz img {
+                width: 100px;
+            }
+        }
+    /* ATIVIDADE AGORA É SUA VEZ GENIALLY AZUL *//* ATIVIDADE AGORA É SUA VEZ GENIALLY AZUL */
+
+
+     /* Estilo base da seção */
+        .conclusao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            background-color: #b9e5a92c;
+            border-bottom: 3px solid #92d678;
+        }
+
+        /* Imagem de topo */
+        .conclusao .imagem-topo {
+            width: 100%;
+            height: auto;
+            max-height: 290px; /* ajuste essa altura conforme necessário */
+            object-fit: cover; /* garante que a imagem preencha sem distorcer */
+            display: block;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF;
+        }
+
+        /* Faixa verde */
+        .conclusao .faixa-verde {
+            width: 100%;
+            background-color: #92d678;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: left;
+        }
+
+        .conclusao .faixa-verde .titulo-secao {
+            font-size: 50px;
+            font-family: 'Bebas Neue', cursive;
+            font-weight: lighter;
+            color: #FFF; /* Cor verde */
+            width: 90%;
+            margin: 10px auto 10px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        .conclusao .titulo-verde {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #b9e5a9; /* Cor verde */
+            width: 90%;
+            max-width: 800px;
+            text-align: left;
+        }
+        /* Parágrafo padrão */
+        .conclusao p {
+            font-size: 19px;
+            font-family: 'Roboto', sans-serif;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin: 10px auto;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .conclusao .faixa-verde .titulo-secao {
+                font-size: 30px;
+            }
+
+            .conclusao p {
+                font-size: 1rem;
+            }
+            .conclusao .imagem-topo {
+                max-height: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .conclusao .faixa-verde .titulo-secao {
+                font-size: 24px;
+            }
+
+            .conclusao p {
+                font-size: 0.95rem;
+            }
+        }
+
+         /* Estilo base da seção */
+        .referencias {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            background-color: #3a96a657;
+            border-bottom: 3px solid #3a95a6;
+        }
+
+        /* Imagem de topo */
+        .referencias .imagem-topo {
+            width: 100%;
+            height: auto;
+            max-height: 290px; /* ajuste essa altura conforme necessário */
+            object-fit: cover; /* garante que a imagem preencha sem distorcer */
+            display: block;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF;
+        }
+
+        /* Faixa verde */
+        .referencias .faixa-verde {
+            width: 100%;
+            background-color: #3a95a6;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: left;
+        }
+
+        .referencias .faixa-verde .titulo-secao {
+            font-size: 50px;
+            font-family: 'Bebas Neue', cursive;
+            font-weight: lighter;
+            color: #FFF; /* Cor verde */
+            width: 90%;
+            margin: 10px auto 10px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        .referencias .titulo-verde {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #b9e5a9; /* Cor verde */
+            width: 90%;
+            max-width: 800px;
+            text-align: left;
+        }
+        /* Parágrafo padrão */
+        .referencias p {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin: 10px auto;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .referencias .faixa-verde .titulo-secao {
+                font-size: 30px;
+            }
+
+            .referencias p {
+                font-size: 1rem;
+            }
+            .referencias .imagem-topo {
+                max-height: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .referencias .faixa-verde .titulo-secao {
+                font-size: 24px;
+            }
+
+            .referencias p {
+                font-size: 0.95rem;
+            }
+        }
+        .conteudo-secao {
+            width: 100% !important;
+            padding: 64px 0 !important; /* padding vertical conforme solicitado */
+            box-sizing: border-box !important;
+        }
+        .download-section {
+                padding: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+            }
+            .download-btn {
+                background-color:  #92d678;
+                color: white;
+                text-decoration: none;
+                font-size: 16px;
+                padding: 10px 15px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                transition: all 0.3s ease;
+                font-weight: bold;
+                margin-top: 80px;
+            }
+
+            .download-btn i {
+                font-size: 18px;
+            }
+
+            .download-btn:hover {
+                background-color: #93d67875;
+            }
+
+            /* Estilização do rodapé */
+        .footer {
+            background-color: #FFFFFF; /* Fundo branco */
+            text-align: center; /* Centralizar texto */
+            padding: 15px 0; /* Espaçamento interno */
+            box-sizing: border-box; /* Inclui padding nas dimensões */
+        }
+
+        .footer p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #015A42; /* Cor do texto */
+            margin: 0; /* Remove espaçamento externo */
+        }
+        /* Texto descritivo */
+        .footer .fonte-menor {
+            font-family: 'Roboto', sans-serif;
+            font-size: 13px;
+            color: #555; /* Cor neutra */
+            line-height: 1.5; /* Espaçamento entre linhas */
+            display: block; /* Garante quebra para nova linha */
+            margin-top: 10px; /* Espaço entre o texto e o divisor */
+        }
+                /* Divisor */
+        .footer-divider {
+            border: none; /* Remove borda padrão */
+            height: 1px; /* Altura da linha */
+            background-color: #015A42; /* Cor da linha */
+            margin: 10px auto; /* Espaçamento vertical */
+            width: 80%; /* Define a largura do divisor */
+            opacity: 0.5; /* Reduz opacidade para suavizar */
+        }
+                /* Ajustes do rodapé para mobile */
+        @media (max-width: 480px) {
+            .footer p {
+                font-size: 15px; /* Ajusta o tamanho da fonte */
+            }
+            .footer .fonte-menor {
+                font-size: 12px; /* Reduz tamanho da fonte */
+                line-height: 1.4; /* Ajusta o espaçamento */
+            }
+            .footer-divider {
+                width: 100%; /* Ajusta largura do divisor no mobile */
+            }
+        }
+        .logo-final {
+            background-color: #b9e5a92c;
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 3px solid #015A42;
+        }
+
+        .logo-final img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+        }
+        /* Nova seção com os títulos ocupando a tela inteira */
+        .ficha-titulos {
+            background-color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .ficha-titulos h2,
+        .ficha-titulos h3 {
+            font-family: 'Bebas Neue', cursive;
+            font-weight: lighter;
+            font-size: 40px;
+            color: #0058B4;
+            margin: 10px 0;
+        }
+
+        /* Mantemos a ficha técnica como estava */
+        .ficha-tecnica {
+            background-color: #FFF;
+            padding: 60px 20px;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+        }
+
+        .ficha-tecnica p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 15px auto;
+            max-width: 700px;
+        }
+
+        .ficha-tecnica strong {
+            display: block;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .paragraforeduzido {
+            font-size: 14px;
+        }
+</style>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1745860739/yt9l3oea3uvrdal8omhx.svg" alt="Logo">
+        </div>
+        <div class="menu-toggle">
+            <i class="bx bx-menu"></i>
+            <i class="bx bx-x" style="display: none;"></i> <!-- Ícone de fechar menu -->
+        </div>
+        <ul>
+            <li><a href="#introducao">Introdução</a></li>
+            <li><a href="#secao1">Tópico 1</a></li>
+            <li><a href="#secao2">Tópico 2</a></li>
+            <li><a href="#secao3">Tópico 3</a></li>
+            <li><a href="#secao4">Tópico 4</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="#conclusao">Conclusão</a></li>
+            <li><a href="#referencias">Refs Bibliográficas</a></li>
+        </ul>
+    </div>
+    <!-- Capa do Livro -->
+    <section id="capa-livro" class="capa-livro">
+        <div class="borda superior"></div>
+        <div class="conteudo-capa">
+            <h1 class="titulo-programa">NÚCLEO DE RELAÇÕES INTERNACIONAIS</h1>
+            <h1 class="titulo-materia">PORTUGUÊS PARA ESTRANGEIROS</h1>
+            <h2 class="subtitulo-professor">Profª Simone Alves Pedersen</h2>
+        </div>
+        <div class="borda inferior"></div>
+    </section>
+    <!-- Seção Introdução -->
+    <section id="introducao" class="introducao">
+        <!-- Barra Superior -->
+        <div class="barra-superior">
+            <h1 class="titulo-barra">UNIDADE 6 | Sociedade</h1>
+        </div>
+    
+        <!-- Conteúdo -->
+        <div class="caixa-texto">
+            <div class="conteudo-centralizado">
+                <h1 class="titulo-introducao">INTRODUÇÃO</h1>
+                <p>Olá, estudante!</p>
+                <p>
+                    Estudar o tema da família no Brasil ajuda você a compreender não só a cultura local, mas também a
+                    maneira como os brasileiros se comunicam no dia a dia. As relações familiares no país costumam ser
+                    marcadas por afetividade, convivência próxima e apoio mútuo.
+                </p>
+                <p>
+                    É comum que pessoas morem perto de seus parentes e mantenham contato frequente. Almoços de
+                    domingo, reuniões familiares e o cuidado com os mais velhos fazem parte da rotina de muitas famílias.
+                    Isso se reflete na linguagem: expressões como "minha casa é a sua casa" ou "a porta está sempre aberta"
+                    mostram o quanto acolhimento e convivência são valorizados.
+                </p>
+                <p>
+                    A família extensa , incluindo avós, tios e primos, participa ativamente da vida cotidiana. Avós que cuidam
+                    dos netos e decisões tomadas em conjunto são exemplos da importância do coletivo na cultura brasileira.
+                </p>
+                <p>
+                    Nos últimos anos, o conceito de família se ampliou. Hoje, é comum encontrar diferentes formações
+                    familiares, como famílias com apenas um dos pais, reconstituídas ou formadas por laços de amizade. Em
+                    muitas regiões, vizinhos e amigos próximos são considerados “família” também.
+                </p>
+                <p>
+                    Esse conhecimento vai enriquecer suas interações e sua experiência no Brasil, tanto linguística quanto
+                    culturalmente. Vamos iniciar nossos estudos?
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="secao1" id="secao1">
+        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1744848303/g7vh0r0sje52zd19k9ww.png"
+            alt="Imagem topo da seção" class="imagem-topo">
+        
+        <div class="faixa-verde">
+            <h1 class="titulo-secao">
+                1. VERBOS DE MOVIMENTO: IR E VIR
+            </h1>
+        </div>
+
+        <div class="conteudo-secao">
+            <p>
+                Vamos iniciar o capítulo com um pouco de gramática. Hoje, vamos conhecer dois verbos muito usados
+                na Língua Portuguesa: “ir” e “vir”. Eles parecem semelhantes, mas indicam movimentos em direções
+                opostas — e são muito importantes no nosso dia a dia. Usamos o verbo “ir” quando falamos de sair de
+                onde estamos para outro lugar. Por exemplo “Vou à festa hoje” e “Vamos ao médico agora.” Já o verbo
+                “vir” expressa o movimento de alguém que se desloca para o lugar onde estamos, como observado em
+                “Você vem comigo?” e em “Vocês vêm ao curso amanhã?”
+            </p>
+            <br>
+            <section class="slider-texto-container tema-roxo" data-slider-id="2">
+                <!-- conteúdo do slider 2 -->
+                <div class="slider-texto-wrapper">
+            
+                    <div class="slide-texto ativo">
+                        <div class="slide-conteudo">
+                            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1755099954/Image52678_hfdgsv.png"
+                                alt="Exemplo supermercado">
+                            <p class="conteudo-texto">
+                                <strong>“Eu vou ao supermercado.”</strong><br>
+                                Nesse caso, a pessoa que fala está em casa e vai
+                                se deslocar até o supermercado.
+                            </p>
+                        </div>
+                    </div>
+            
+                    <div class="slide-texto">
+                        <div class="slide-conteudo">
+                            <img src="
+                            https://res.cloudinary.com/di4ria1pf/image/upload/v1755099954/Image52698_bljs09.png"
+                                alt="Exemplo visita casa">
+                            <p class="conteudo-texto">
+                                <strong>“Você vem para minha casa?”</strong><br>
+                                Aqui, a pessoa que fala está em casa e espera que
+                                a outra pessoa vá até ela.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            
+                <button class="seta-texto esquerda" onclick="mudarSlideTexto(this, -1)">&#10094;</button>
+                <button class="seta-texto direita" onclick="mudarSlideTexto(this, 1)">&#10095;</button>
+            
+                <div class="slider-texto-indicadores"></div>
+            </section>
+            <br>
+            <p>
+                Esses verbos são muito úteis quando falamos sobre atividades sociais, compromissos, visitas a amigos
+                ou eventos do cotidiano. Com eles, conseguimos combinar encontros, explicar deslocamentos e organizar
+                nossa rotina com mais clareza. Saber usar corretamente os verbos “ir” e “vir” ajuda você a se comunicar
+                melhor e a participar mais ativamente da vida em comunidade!
+            </p>
+            <br>
+            <h1 class="titulo-verde">
+                1.1 CONJUGAÇÃO NO PRESENTE DO INDICATIVO
+            </h1>
+            <p>
+                Esses dois verbos são irregulares, portanto, é preciso atenção à conjugação. Veja a conjugação no presente:
+            </p>
+            <br>
+            <section class="tabs-section" id="grupo-tabs-a">
+                <div class="tabs-header">
+                    <button class="tab-btn" data-target="exemplo1">VERBO IR</button>
+                    <button class="tab-btn" data-target="exemplo2">VERBO VIR</button>
+            
+                </div>
+            
+                <div class="tabs-content">
+                    <div id="exemplo1" class="tab-content">
+                        <p>▸ Eu vou;</p>
+                        <p>▸ Tu vais;</p>
+                        <p>▸ Ele/ela vai;</p>
+                        <p>▸ Nós vamos;</p>
+                        <p>▸ Vós ides;</p>
+                        <p>▸ Eles/elas vão.</p>
+                    </div>
+                    <div id="exemplo2" class="tab-content">
+                        <p>▸ Eu venho;</p>
+                        <p>▸ Tu vens;</p>
+                        <p>▸ Ele/ela vem;</p>
+                        <p>▸ Nós vimos;</p>
+                        <p>▸ Vós vindes;</p>
+                        <p>▸ Eles/elas vêm.</p>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <p>
+                Compare o uso dos dois verbos: quando dizemos “Nós vamos ao cinema toda semana”, usamos o verbo
+                ir para indicar um deslocamento do local em que estamos para outro lugar. Já em “Eles vêm visitar a avó
+                no domingo”, utilizamos o verbo vir porque a ação está em direção à pessoa que fala — no caso, a avó
+                está com quem narra a frase, e os visitantes estão se aproximando dela.
+            </p>
+            <br>
+            <h1 class="titulo-verde">
+                1.2 CONJUGAÇÃO NO PASSADO: PRETÉRITO PERFEITO
+            </h1>
+            <p>
+                Agora que você já conhece o uso e a conjugação dos verbos “ir” e “vir” no presente, vamos ver como
+                eles se comportam no passado. No pretérito perfeito, esses dois verbos continuam irregulares e mudam
+                bastante suas formas em relação ao presente. É importante prestar atenção nessas mudanças para evitar
+                confusões, já que as palavras podem soar bem diferentes. Observe a conjugação e os exemplos a seguir:
+            </p>
+            <br>
+            <section class="tabs-section" id="grupo-tabs-d">
+                <div class="tabs-header">
+                    <button class="tab-btnc" data-target="exemplo10">VERBO IR</button>
+                    <button class="tab-btnc" data-target="exemplo11">VERBO VIR</button>
+                </div>
+            
+                <div class="tabs-contentc">
+                    <div id="exemplo10" class="tab-content">
+                        <p>▸ Eu fui;</p>
+                        <p>▸ Tu foste;</p>
+                        <p>▸ Ele/ela foi;</p>
+                        <p>▸ Nós fomos;</p>
+                        <p>▸ Vós fostes;</p>
+                        <p>▸ Eles/elas foram.</p>
+                    </div>
+                    <div id="exemplo11" class="tab-content">
+                        <p>▸ Eu vim;</p>
+                        <p>▸ Tu vieste;</p>
+                        <p>▸ Ele/ela veio;</p>
+                        <p>▸ Nós viemos;</p>
+                        <p>▸ Vós viestes;</p>
+                        <p>▸ Eles/elas vieram.</p>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <p>
+                Veja como os verbos aparecem em situações cotidianas: quando dizemos “Ontem eu fui ao parque”,
+                estamos utilizando o verbo ir no passado para indicar um deslocamento que já aconteceu. Já na frase
+                “Ela veio do trabalho às sete”, o verbo vir demonstra que a pessoa se aproximou de quem fala, também
+                em um momento já concluído.
+            </p>
+            <br>
+            <h1 class="titulo-verde">
+                1.3 CONJUGAÇÃO NO FUTURO DO PRESENTE
+            </h1>
+            <p>
+                Vamos pensar agora nas ações que ainda vão acontecer, aquelas que estão planejadas para o futuro.
+                Os verbos “ir” e “vir”, mesmo no futuro, continuam irregulares e têm formas específicas que precisam ser
+                memorizadas. Essa conjugação é muito útil para marcar compromissos, fazer planos ou fazer convites.
+                Veja abaixo como conjugar esses verbos e como usá-los em diferentes situações:
+            </p>
+            <br>
+            <section class="tabs-section" id="grupo-tabs-b">
+                <div class="tabs-header">
+                    <button class="tab-btn" data-target="exemplo3">VERBO IR</button>
+                    <button class="tab-btn" data-target="exemplo4">VERBO VIR</button>
+            
+                </div>
+            
+                <div class="tabs-content">
+                    <div id="exemplo3" class="tab-content">
+                        <p>▸ Eu irei;</p>
+                        <p>▸ Tu irás;</p>
+                        <p>▸ Ele/ela irá;</p>
+                        <p>▸ Nós iremos;</p>
+                        <p>▸ Vós ireis;</p>
+                        <p>▸ Eles/elas irão.</p>
+                    </div>
+                    <div id="exemplo4" class="tab-content">
+                        <p>▸ Eu virei;</p>
+                        <p>▸ Tu virás;</p>
+                        <p>▸ Ele/ela virá;</p>
+                        <p>▸ Nós viremos;</p>
+                        <p>▸ Vós vireis;</p>
+                        <p>▸ Eles/elas virão.</p>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <p>
+                No futuro, também usamos esses verbos para indicar ações que ainda vão acontecer. Por exemplo:
+                <i>“Amanhã nós iremos ao médico”</i> mostra um plano com o verbo ir, enquanto <i>“Você virá para o jantar?”</i>
+                expressa um convite usando o verbo vir, com a ideia de deslocamento em direção a quem fala. Essas
+                formas ajudam a organizar o que ainda está por vir no nosso dia a dia.
+            </p>
+            <p>
+                Dica para lembrar:
+            </p>
+            <div class="topico-texto">
+                <ul>
+                    <li><span class="topico-destaque"><strong>▸ </strong> Se você está saindo do lugar onde está → use ir.</span></li>
+                    <li><span class="topico-destaque"><strong>▸ </strong> Se você está chegando ao lugar de quem fala → use vir.</span></li>
+                </ul>
+            </div>
+            <p>
+                Agora que você já entendeu como funcionam esses verbos, que tal ver como eles aparecem em uma
+                conversa do dia a dia? Acompanhe o diálogo a seguir:
+            </p>
+            <br>
+            <!-- Slider de Quadrinhos -->
+            <section class="slider-quadrinhos" data-id="quadrinhos1">
+                <h2 class="titulo-slider">
+                    <span class="figura">Figura 1.</span> Diálogo: “Fim de semana combinado”
+                </h2>
+            
+                <div class="slider-container">
+                    <button class="seta esquerda" onclick="mudarSlide(-1)">&#10094;</button>
+            
+                    <div class="slider">
+                        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1755029685/Quadrinho_62_1_y8gdcn.png"
+                            alt="Quadrinho 1" class="slide ativo">
+                        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1755029686/Quadrinho_62_2_gtjvvf.png"
+                            alt="Quadrinho 2" class="slide">
+                        
+                    </div>
+            
+                    <button class="seta direita" onclick="mudarSlide(1)">&#10095;</button>
+                </div>
+            
+                <!-- Agora os dots ficam aqui fora -->
+                <div class="slider-indicadores">
+                    <span class="dot" onclick="irParaSlide(0)"></span>
+                    <span class="dot" onclick="irParaSlide(1)"></span>
+                    
+                </div>
+            
+                <p class="fonte-imagem">
+                    <span class="text-italic"><strong>Fonte:</strong> USF, 2025.</span>
+                </p>
+            </section>
+            <br>
+            <p>
+                Os verbos “ir” e “vir” são essenciais para falar sobre deslocamentos e rotinas. Como são irregulares, é
+                importante praticar bastante suas conjugações e prestar atenção ao ponto de vista da pessoa que fala.
+                Com o tempo, você usará esses verbos de forma natural em suas conversas em português.
+            </p>
+        </div>
+    </section>
+    <section class="secao2" id="secao2">
+        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1745482633/lzh6tivsuwgnneylpzvp.png"
+            alt="Imagem topo da seção" class="imagem-topo">
+        
+        <div class="faixa-verde">
+            <h1 class="titulo-secao">
+                2. REGRAS LEGAIS E CULTURAIS
+            </h1>
+        </div>
+        <div class="conteudo-secao">
+            <p>
+                No Brasil, as regras legais e as normas sociais desempenham um papel cooperativo na organização da vida
+                da sociedade. Ambas são necessárias para uma convivência harmoniosa, mas divergem na sua origem,
+                métodos de implementação e efeitos do não cumprimento.
+            </p>
+            <h1 class="titulo-verde">
+                2.1 REGRAS SOCIAIS
+            </h1>
+            <p>
+                As regras sociais são normas informais que regulam o comportamento esperado em diferentes contextos
+                culturais e sociais. Elas não estão escritas em leis; pelo contrário, são aprendidas através da interação e
+                reforçadas por famílias, escolas, a mídia e organizações sociais como clubes ou igrejas.
+            </p>
+            <p>
+                Navegue pelas setas a seguir e veja alguns exemplos comuns:
+            </p>
+            <br>
+            <section class="slider-texto-container" data-slider-id="1">
+                <div class="slider-texto-wrapper">
+                    <div class="slide-texto ativo">
+                        <p class="conteudo-texto">
+                            Dizer “por favor” e “obrigado” ao lidar com os outros;
+                        </p>
+                    </div>
+                    <div class="slide-texto">
+                        <p class="conteudo-texto">
+                            Chegar pontualmente a compromissos;
+                        </p>
+                    </div>
+                    <div class="slide-texto">
+                        <p class="conteudo-texto">
+                            Respeitar os idosos;
+                        </p>
+                    </div>
+                    <div class="slide-texto">
+                        <p class="conteudo-texto">
+                        Não furar fila;
+                        </p>
+                    </div>  
+                    <div class="slide-texto">
+                        <p class="conteudo-texto">
+                            Vestir-se adequadamente para um ambiente específico
+                            (como uma repartição pública).
+                        </p>
+                    </div>
+                </div>
+            
+                <button class="seta-texto esquerda" onclick="mudarSlideTexto(this, -1)">&#10094;</button>
+                <button class="seta-texto direita" onclick="mudarSlideTexto(this, 1)">&#10095;</button>
+            
+                <div class="slider-texto-indicadores">
+                </div>
+            </section>
+            <br>
+            <p>
+                Essas normas variam conforme o grupo social. Tem empresas que exigem roupas formais, outras são
+                mais descontraídas. Tem famílias que esperam que os idosos sejam chamados de “senhor” e “senhora”,
+                enquanto em outras famílias usa-se o “você”, independentemente da idade. Quem não segue uma regra
+                social pode até não ser punido pela lei, mas pode receber críticas, olhares de reprovação ou até ser
+                excluído de certos grupos.
+            </p>
+            <h1 class="titulo-verde">
+                2.2 REGRAS LEGAIS
+            </h1>
+            <p>
+                Em contraste, as regras legais são formais e estão contidas nas leis do Estado. Elas são obrigatórias e se
+                aplicam a todos os cidadãos, sem exceção. Os regulamentos legais estão estabelecidos na Constituição,
+                no Código Civil, no Código Penal, na legislação trabalhista e em outras fontes do direito brasileiro, como
+                o Código de Trânsito.
+            </p>
+            <p>
+                Veja alguns exemplos navegando pelas setas abaixo.
+            </p>
+            <br>
+            <section class="slider-texto-container" data-slider-id="1">
+                <div class="slider-texto-wrapper">
+                    <div class="slide-texto ativo">
+                        <p class="conteudo-texto">
+                            Pagar impostos;
+                        </p>
+                    </div>
+                    <div class="slide-texto">
+                        <p class="conteudo-texto">
+                            Respeitar os direitos humanos;
+                        </p>
+                    </div>
+                    <div class="slide-texto">
+                        <p class="conteudo-texto">
+                            Não roubar, agredir ou matar;
+                        </p>
+                    </div>
+                    <div class="slide-texto">
+                        <p class="conteudo-texto">
+                            Obedecer às leis de trânsito;
+                        </p>
+                    </div>
+                    <div class="slide-texto">
+                        <p class="conteudo-texto">
+                            Garantir a frequência escolar mínima para crianças e
+                            adolescentes.
+                        </p>
+                    </div>
+                </div>
+            
+                <button class="seta-texto esquerda" onclick="mudarSlideTexto(this, -1)">&#10094;</button>
+                <button class="seta-texto direita" onclick="mudarSlideTexto(this, 1)">&#10095;</button>
+            
+                <div class="slider-texto-indicadores">
+                </div>
+            </section>
+            <br>
+            <p>
+                O não cumprimento de uma regra legal acarretará penalidades formais, como multa, prisão, perda de direitos ou
+                pagamento de indenizações. A aplicação dessas medidas é realizada pelo sistema judiciário e várias agências
+                públicas responsáveis (polícia, tribunais, conselhos tutelares etc.). É importante lembrar que o Brasil garante
+                liberdade religiosa e de expressão, então comportamentos religiosos não são obrigatórios por lei.
+            </p>
+            <br>
+            <div class="outer-container">
+                <div class="inner-container">
+            
+                    <!-- Seção da imagem e descrição -->
+                    <div class="image-section">
+                        <div class="figure-title">Figura 2.</div>
+                        <div class="figure-subtitle">Leis e costumes</div>
+                        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1755030772/figura06_ktutmc.png"
+                            alt="Laptop">
+                        <div class="image-caption">
+                            <strong>Fonte</strong>: Adaptado de Freepik.
+                        </div>
+                    </div>
+            
+                    <!-- Seção do texto -->
+                    <div class="text-section">
+                        As regras sociais refletem costumes e valores morais, enquanto
+                        as regras legais garantem direitos e deveres de toda a população.
+                        Uma pessoa pode estar dentro da lei, mas ser desaprovada pela
+                        sociedade (por exemplo, se gritar no meio de um desfile de rua
+                        tocando música). Da mesma forma, alguém pode ser bem visto
+                        socialmente, mas ainda assim infringir a lei (por exemplo, não
+                        pagar impostos). Também sabemos que as regras formais e as
+                        regras culturais variam de acordo com os tempos. O que não era
+                        aceito antigamente, pode ser aceito hoje, com tranquilidade.
+                    </div>
+            
+                </div>
+            </div>
+            <br>
+            <p>
+                Ambas são importantes: as regras sociais promovem o respeito e a convivência, enquanto as regras
+                legais garantem direitos, deveres e justiça. Muitas vezes, uma reforça a outra. Por exemplo, a regra social
+                de respeitar os idosos é apoiada por leis como o Estatuto do Idoso.
+            </p>
+            <p>
+                Outros exemplos de leis importantes: o Estatuto da Criança e Adolescente (ECA), Leis de proteção ao
+                meio ambiente e aos animais, a Lei Maria da Penha (Lei nº 11.340/2006) é a principal lei com mecanismos
+                para coibir a violência doméstica e familiar, além de oferecer medidas de assistência e proteção.
+            </p>
+            <p>
+                Viver em sociedade exige equilíbrio: seguir as leis, mas também respeitar os outros no dia a dia. Conhecer
+                as regras, formais e informais, nos ajuda a ser cidadãos mais conscientes e construir uma sociedade mais
+                justa, democrática e solidária. A falta de respeito ao próximo já indica o tipo de comportamentos que não
+                pode ser aceito em uma sociedade democrática como é o Brasil.
+            </p>
+        </div>
+    </section>
+    <section class="secao1" id="secao3">
+        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1744848303/g7vh0r0sje52zd19k9ww.png"
+            alt="Imagem topo da seção" class="imagem-topo">
+        
+        <div class="faixa-verde">
+            <h1 class="titulo-secao">
+                3. FAMILIARES E PARENTESCO
+            </h1>
+        </div>
+
+        <div class="conteudo-secao">
+            <p>
+                A família é a base das relações sociais humanas, é onde tudo começa. É no convívio familiar que
+                desenvolvemos nossa formação afetiva, cultural e moral. Os laços familiares nos unem e nos fortalecem.
+                Com a família aprendemos a nos relacionar, a nos comunicar em determinado idioma, a viver em
+                sociedade. No estudo de uma língua, seja materna ou estrangeira, compreender os termos de parentesco
+                é essencial, tanto para a comunicação cotidiana quanto para o entendimento de contextos culturais.
+                Na cultura brasileira, o contato com os familiares costuma ser muito próximo e frequente, e, em muitas
+                famílias, esse contato acontece todos os dias. Confira, a seguir, a tradução em inglês dos termos usados
+                para descrever a família e os familiares.
+            </p>
+            <h2 class="titulo-quadrov"><span class="text-greenv">Quadro 1.</span> | Vocabulário básico de laços familiares</h2>
+            <br>
+            <div class="tabela-container">
+                <table class="tabela-familia">
+                    <thead>
+                        <tr>
+                            <th>PORTUGUÊS</th>
+                            <th>INGLÊS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bisavô</td>
+                            <td>Great Grandfather</td>
+                        </tr>
+                        <tr>
+                            <td>Bisavó</td>
+                            <td>Great Grandmother</td>
+                        </tr>
+                        <tr>
+                            <td>Avô</td>
+                            <td>Grandfather</td>
+                        </tr>
+                        <tr>
+                            <td>Avó</td>
+                            <td>Grandmother</td>
+                        </tr>
+                        <tr>
+                            <td>Pai</td>
+                            <td>Father</td>
+                        </tr>
+                        <tr>
+                            <td>Mãe</td>
+                            <td>Mother</td>
+                        </tr>
+                        <tr>
+                            <td>Filho</td>
+                            <td>Son</td>
+                        </tr>
+                        <tr>
+                            <td>Filha</td>
+                            <td>Daughter</td>
+                        </tr>
+                        <tr>
+                            <td>Irmão</td>
+                            <td>Brother</td>
+                        </tr>
+                        <tr>
+                            <td>Irmã</td>
+                            <td>Sister</td>
+                        </tr>
+                        <tr>
+                            <td>Tio</td>
+                            <td>Uncle</td>
+                        </tr>
+                        <tr>
+                            <td>Tia</td>
+                            <td>Aunt</td>
+                        </tr>
+                        <tr>
+                            <td>Primo/Prima</td>
+                            <td>Cousin</td>
+                        </tr>
+                        <tr>
+                            <td>Sobrinho</td>
+                            <td>Nephew</td>
+                        </tr>
+                        <tr>
+                            <td>Sobrinha</td>
+                            <td>Niece</td>
+                        </tr>
+                        <tr>
+                            <td>Neto</td>
+                            <td>Grandson</td>
+                        </tr>
+                        <tr>
+                            <td>Neta</td>
+                            <td>Granddaughter</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="fonte-imagem">
+                    <span class="text-italic"><strong>Fonte:</strong> Elaborado pela autora, 2025.</span>
+                </p>
+            </div>
+            <p>
+                Agora que você já conhece os nomes dos familiares em inglês e português, vamos entender como essas
+                relações são organizadas. No Brasil, o parentesco pode ser classificado em graus, de acordo com a
+                proximidade entre os membros da família. Explore os cards a seguir para conhecer os diferentes graus
+                de parentesco.
+            </p>
+            <br>
+            <div class="flip-cards-container">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Primeiro grau</div>
+                        <div class="flip-card-back">
+                            Pai, mãe, filhos
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Segundo grau</div>
+                        <div class="flip-card-back">
+                            Irmãos, avós, netos
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Terceiro grau</div>
+                        <div class="flip-card-back">
+                            Tios, tias, sobrinhos,
+                            sobrinhas, primos
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <br>
+            <p>
+                E como podemos estruturar esses graus de parentesco? Para entender melhor essas conexões, podemos
+                observar uma árvore <strong>genealógica</strong>. Ela mostra, de forma visual, como os membros da família estão
+                relacionados, facilitando a compreensão dos diferentes graus de parentesco e da organização familiar.
+            </p>
+            <br>
+            <h2 class="titulo-quadrov"><span class="text-greenv">Figura 3.</span> Visualizando a família</h2>
+            <div class="quadroimg">
+                <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1755102932/Figura3_zjo6rm.png"
+                    alt="árvore genealógica" onclick="openModal(this)">
+            </div>
+            <!-- Modal para exibir a imagem ampliada -->
+            <div id="imageModal" class="modal" onclick="closeModal()">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modalImg">
+            </div>
+            <p class="fonte-imagem">
+                <span class="text-italic"><strong>Fonte:</strong> USF, 2025.</span>
+            </p>
+            <br>
+            <!-- Slider de Quadrinhos -->
+            <section class="slider-quadrinhos" data-id="quadrinhos1">
+                <h2 class="titulo-slider">
+                    <span class="figura">Figura 4.</span> Familiares
+                </h2>
+            
+                <div class="slider-container">
+                    <button class="seta esquerda" onclick="mudarSlide(-1)">&#10094;</button>
+            
+                    <div class="slider">
+                        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1755033867/Quadrinho_61_1_rcotjn.png"
+                            alt="Quadrinho 1" class="slide ativo">
+                        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1755033857/Quadrinho_61_2_kiiorw.png"
+                            alt="Quadrinho 2" class="slide">
+                        
+            
+                    </div>
+            
+                    <button class="seta direita" onclick="mudarSlide(1)">&#10095;</button>
+                </div>
+            
+                <!-- Agora os dots ficam aqui fora -->
+                <div class="slider-indicadores">
+                    <span class="dot" onclick="irParaSlide(0)"></span>
+                    <span class="dot" onclick="irParaSlide(1)"></span>
+                   
+                </div>
+            
+                <p class="fonte-imagem">
+                    <span class="text-italic"><strong>Fonte:</strong> USF, 2025.</span>
+                </p>
+            </section>
+            <!-- Modal de Imagem Ampliada -->
+            <div id="modal-imagem" class="modal-imagem">
+                <span class="fechar" onclick="fecharModal()">&times;</span>
+                <img class="imagem-modal" id="imagem-ampliada" alt="Imagem ampliada">
+            
+                <!-- Setas de navegação -->
+                <button class="seta-modal esquerda" onclick="navegarModal(-1)">&#10094;</button>
+                <button class="seta-modal direita" onclick="navegarModal(1)">&#10095;</button>
+            
+                <!-- Indicador numérico -->
+                <div class="indicador-contador" id="contador-modal">1 / 1</div>
+            
+                <!-- Pontinhos -->
+                <div class="indicador-pontos" id="pontos-modal"></div>
+            </div>
+            <br>
+            <p>
+                As relações familiares no Brasil são marcadas pela proximidade, pelo afeto e pela convivência constante,
+                seja em datas especiais ou no dia a dia. No entanto, ao longo da vida, ampliamos esse círculo e construímos
+                outros laços importantes, como amizades e relações profissionais, que também fazem parte do nosso
+                cotidiano e da cultura brasileira.
+            </p>
+            <p>
+                Entre essas novas relações estão os colegas. Eles são, geralmente, pessoas com quem mantemos
+                relações em ambientes específicos, como a escola, a universidade ou o trabalho. Esses vínculos nem
+                sempre são afetivos, mas fazem parte do nosso convívio diário e podem se tornar relações significativas
+                com o tempo. Já os amigos são pessoas com quem escolhemos conviver, compartilhando momentos,
+                interesses e afetos. No Brasil, amigos próximos costumam ser considerados membros da família, sendo
+                tratados com carinho e intimidade semelhantes aos laços familiares.
+            </p>
+            <p>
+                Nas interações acadêmicas e profissionais, é comum o uso de tratos formais, como “senhor”, “senhora”,
+                “doutor”, “doutora”. Essas formas de tratamento são mais frequentes na principalmente na comunicação
+                escrita, ou em situações que exigem formalidade, como reuniões com colaboradores, clientes ou
+                prestadores de serviços. Embora no dia a dia, no local de trabalho ou na universidade, colegas usam
+                “você”, sempre mantendo o respeito e profissionalismo.
+            </p>
+            <p>
+                E quando há algo para comemorar, é comum reunir muitas pessoas em festas cheias de comida, música,
+                risadas e tradição. Esses momentos fortalecem os laços familiares, e mantêm viva a convivência entre
+                gerações. Além disso, não é raro que colegas de trabalho formem relações de amizade e sejam convidados
+                para festas e comemorações familiares.
+            </p>
+            <p>
+                Os brasileiros gostam de organizar festas privadas para celebrar, por exemplo, aniversários, casamentos,
+                e festas de final de ano - Natal e Réveillon - que são amplamente comemorados pelas famílias, seja com
+                um almoço para poucas pessoas, do núcleo familiar ou festas que podem ter dezenas ou até centenas de
+                pessoas, incluindo amigos e colegas de trabalho.
+            </p>
+        <br>
+        <div class="outer-container-altv">
+            <div class="inner-container-altv">
+                <!-- Seção da imagem e descrição -->
+                <div class="image-section">
+                    <div class="figure-header">
+                        <span class="figure-title-alt">Figura 5.</span>
+                        <span class="figure-subtitle">Aniversários</span>
+                    </div>
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1755034340/figura01_jqjdwr.jpg"
+                        alt="Boca Aberta">
+                    <div class="image-caption">
+                        <strong>Fonte:</strong> Adaptado de Freepik.
+                    </div>
+                </div>
+        
+                <!-- Seção do texto -->
+                <div class="text-section">
+                    As festas de aniversário são celebradas com entusiasmo em
+                    todas as idades: crianças, adultos e idosos costumam ganhar
+                    uma comemoração especial. No caso das festas infantis, é
+                    comum que o tema envolva personagens de jogos, desenhos
+                    ou filmes. A decoração, os doces e até os brinquedos lembram
+                    os elementos desse universo, como bolos que representam
+                    vitórias, sucos e refrigerantes como “prêmios” simbólicos, e
+                    lembrancinhas que remetem ao mundo da fantasia. Em algumas
+                    famílias, as chamadas festas de quinze anos, ou debutantes,
+                    também têm um significado especial. Elas celebram uma nova
+                    fase da vida e costumam ser eventos marcantes, com muita
+                    preparação e a presença de toda a família
+                </div>
+            </div>
+        </div>
+        <br>
+        <p>
+            O Natal (25 de dezembro) é uma das datas mais significativas do ano para muitas famílias. A celebração
+            principal acontece na véspera do dia 24, quando as famílias se reúnem para um jantar e troca de presentes.
+            Esse jantar é chamado de “ceia” e costuma ser servido tarde da noite, por volta das 23h-24h, e a comida
+            permanece disponível pela madrugada.
+        </p>
+        <p>
+            Nas casas, é comum montar presépios e árvores de Natal, que representam o nascimento de Jesus. Nos
+            últimos anos, as decorações externas, ao estilo estadunidense, também ganharam espaço: luzes nas
+            fachadas, figuras natalinas infláveis e cenários fotográficos são cada vez mais populares. Os shopping
+            centers decoram o seu interior, costumam ter uma árvore (ou um urso) gigante e um Papai Noel atende
+            as crianças e tira fotos com elas, sentado em seu trono vermelho.
+        </p>
+        <p>
+            Para muitos estrangeiros pode soar estranho um Natal com temperaturas em torno dos 30 graus e
+            decorações com neve artificial, mas a criatividade dos brasileiros não considera a temperatura. Os pratos
+            típicos variam bastante, mas costumam incluir peru, farofa, rabanada e panetone.
+        </p>
+        <br>
+        <div class="outer-container-altv">
+            <div class="inner-container-altv">
+        
+                <!-- Colocamos o texto primeiro para que com row-reverse a imagem fique à esquerda -->
+                <div class="text-section">
+                    Já o Ano Novo (Réveillon) é celebrado em diferentes contextos:
+                    algumas pessoas passam com a família, outras com amigos. A
+                    praia é um dos destinos preferidos para esse momento, e em
+                    muitas cidades brasileiras é comum ver multidões vestidas de
+                    branco, cor que simboliza paz e bons desejos para o novo ano.
+                    Nas festas em casa ou em eventos, é comum servir lentilhas,
+                    uvas e champanhe, símbolos de sorte e prosperidade. Mas nas
+                    celebrações à beira-mar, o costume é brindar com champanhe
+                    (ou espumante) à meia-noite, acompanhando os fogos e a
+                    vibração coletiva de milhares de pessoas, dependendo da praia.
+                </div>
+        
+                <!-- Seção da imagem e descrição -->
+                <div class="image-section">
+                    <div class="figure-header">
+                        <span class="figure-title-alt">Figura 6.</span>
+                        <span class="figure-subtitle">Leis e costumes</span>
+                    </div>
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1755034801/figura6_p8hqso.jpg"
+                        alt="Boca Aberta">
+                    <div class="image-caption">
+                        <strong>Fonte:</strong> Adaptado de Freepik.
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+        <br>
+
+        <p>
+            Existem algumas tradições no Ano Novo, como pular sete ondas para ter sorte no novo ano ou carregar
+            sementes de romã na carteira. São chamadas de “simpatias”, essas ações simbólicas com o intuito de
+            “chamar a sorte”.
+        </p>
+        <p>
+            Além do Natal e do Ano Novo, existem várias outras comemorações que fortalecem os laços familiares e
+            sociais no Brasil. Entre as datas mais queridas estão o Dia das Mães (segundo domingo de maio) e Dia
+            dos Pais (segundo domingo de agosto). Nessas datas, os homenageados costumam receber presentes,
+            cartões feitos pelas crianças e muito carinho. É comum que as famílias almocem juntas, seja em casa ou
+            em restaurantes, que precisam ser reservados com antecedência, pois ficam lotados.
+        </p>
+        <p>
+            Outros momentos importantes são aqueles ligados à chegada de novos membros da família. O Chá
+            de Bebê é uma festa em que amigos e família se juntam para encher o bebê de presentes. Já o Chá
+            Revelação do Sexo, celebra com emoção o momento em que os pais descobrem se terão uma menina ou
+            um menino. Falando em bebês, temos também os batizados, que são seguidos por celebrações modestas
+            ou grandes almoços com parentes e padrinhos.
+        </p>
+        <p>
+            Naturalmente, não podemos deixar de citar os Casamentos. Um casamento pode ter uma grande reunião
+            ou uma festa pequena, mas sempre é animado. Além do casamento em si, os aniversários de casamento,
+            especialmente os de 25 anos (bodas de prata) e 50 anos (bodas de ouro), também geram grandes reuniões
+            familiares. Nestas datas especialmente, costumam-se fazer grandes festas em salões de eventos, com
+            vestimentas especiais por parte dos celebrantes e dos convidados.
+        </p>
+        <p>
+            As formaturas também são momentos marcantes. No Brasil, as celebrações acontecem desde a educação
+            infantil até o ensino médio e a universidade. No ensino superior, é comum ter eventos maiores, com
+            discursos, homenagens, jantares e festas. Muitos estudantes do ensino médio também organizam viagens
+            de formatura para cidades praianas ou optam por festas com os colegas, pois esse é um momento de
+            encerramento e comemoração da trajetória escolar.
+        </p>
+        <p>
+            Por fim, não podemos deixar de comentar os eventos profissionais. Em datas como o final do ano, muitas
+            empresas, instituições e comércios celebram com todos os profissionais. Essas festas de final de ano
+            podem acontecer no próprio local de trabalho, ou em restaurantes, salões de eventos, clubes com churrasco
+            e piscina, por exemplo, ou até mesmo na casa de um dos profissionais.
+        </p>
+        <p>
+            Cada comemoração é uma oportunidade de reforçar os vínculos, compartilhar momentos e celebrar a vida
+            em conjunto. Entender essas práticas ajuda não só a ampliar o vocabulário, mas também a compreender
+            os valores culturais que moldam a forma como nos relacionamos.
+        </p>
+        <br>
+        <!-- Bloco de vídeo com estilo variante -->
+        <div class="video-thumbnail estilo-azul"
+            data-video="https://player-vz-04af0c61-9a0.tv.pandavideo.com.br/embed/?v=9ca0ac00-801c-494d-bbb9-5d55c304fcb3&preload=false">
+            <div class="video-bg"
+                style="background-image: url('https://res.cloudinary.com/di4ria1pf/image/upload/v1745434099/k1hkgcwcv7ydys0dxmzu.jpg');">
+            </div>
+            <div class="play-icon">&#9658;</div>
+        </div>
+        
+        <!-- Modal de Vídeo -->
+        <div id="videoModal" class="video-modal">
+            <div class="modal-content">
+                <span class="fechar-modal">&times;</span>
+                <iframe id="videoIframe" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <br>
+        </div>
+    </section>
+    <section class="secao4" id="secao4">
+        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1745601513/wglkd0x3l2uasackwlxn.png"
+            alt="Imagem topo da seção" class="imagem-topo">
+        <div class="faixa-verde">
+            <h1 class="titulo-secao">
+                4. RELAÇÕES SOCIAIS E DE AMIZADE
+            </h1>
+        </div>
+
+        <div class="conteudo-secao">
+            <p>
+                Os brasileiros são conhecidos por serem calorosos, afetuosos e amigáveis. Os relacionamentos no Brasil
+                costumam ser bastante próximos e espontâneos. Literalmente, amigos de porta em porta, os brasileiros
+                em geral são muito hospitaleiros, amistosos e podem ser muito fáceis de se fazer amizade, mesmo que
+                não os conheçamos de todo. Para a maioria das pessoas, as amizades são um símbolo de conexão
+                emocional. Apelidos carinhosos e confissões íntimas não são incomuns desde o início de uma amizade,
+                e os brasileiros muitas vezes pensam em seus amigos quase como família.
+            </p>
+            <br>
+            <div class="outer-container">
+                <div class="inner-container">
+            
+                    <!-- Seção da imagem e descrição -->
+                    <div class="image-section">
+                        <div class="figure-title">Figura 7.</div>
+                        <div class="figure-subtitle">Amizades no Brasil</div>
+                        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1755099084/figura04_qjx4fh.jpg" alt="">
+                        <div class="image-caption">
+                            <strong>Fonte</strong>: Adaptado de Freepik.
+                        </div>
+                    </div>
+            
+                    <!-- Seção do texto -->
+                    <div class="text-section">
+                        As amizades no Brasil são frequentemente intensas e carregadas
+                        de emoção. Para muita gente, um amigo é quase como um
+                        membro da família. É comum usar apelidos carinhosos e
+                        compartilhar assuntos íntimos mesmo nas fases iniciais de uma
+                        amizade. Expressões como “querido”, “irmão” ou “mana” fazem
+                        parte do vocabulário afetivo e informal do dia a dia, mesmo
+                        entre pessoas que acabaram de se conhecer. A comunicação
+                        brasileira é direta, expressiva e muito corporal. Gestos como
+                        abraçar, dar tapinhas no braço ou beijar no rosto são parte do
+                        convívio e indicam proximidade. O toque físico é, muitas vezes,
+                        uma forma de demonstrar atenção e afeto.
+                    </div>
+            
+                </div>
+            </div>
+            <br>
+            <p>
+                Outro traço marcante dos brasileiros é a sua hospitalidade. Receber amigos em casa é algo valorizado.
+                Não há muita necessidade de planejar com antecedência: um café, um bolo ou uma pequena refeição
+                são suficientes para tornar o ambiente acolhedor. Nessas visitas, os laços se fortalecem, e é em casa que
+                muitas vezes os laços de amizade são solidificados.
+            </p>
+            <p>
+                No Brasil, a amizade é vivida de forma coletiva: é comum ver grupos reunidos em festas, churrascos,
+                praias, rodas de conversa e jogos. Esses encontros fazem parte do cotidiano e reforçam os laços de
+                convivência em diferentes espaços, como em escolas, igrejas ou clubes, em universidades e locais de
+                trabalho. Existe certa flexibilidade temporal nessas interações. A pontualidade não é rígida em situações
+                informais, e atrasos de até meia hora, em média, são comuns.
+            </p>
+            <p>
+                Com os avanços da tecnologia, as redes sociais se tornaram uma extensão das relações de amizade.
+                Os brasileiros estão entre os que mais utilizam as plataformas para manter o contato com amigos. Trocar
+                fotos, vídeos, mensagens e memes é uma maneira cotidiana das pessoas reforçarem companheirismos
+                de longa data.
+            </p>
+            <br>
+            <div class="outer-container">
+                <div class="inner-container">
+            
+                    <!-- Seção da imagem e descrição -->
+                    <div class="image-section">
+                        <div class="figure-title">Figura 8.</div>
+                        <div class="figure-subtitle">Amizades</div>
+                        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1755099083/figura05_clq9ep.png" alt="">
+                        <div class="image-caption">
+                            <strong>Fonte</strong>: Adaptado de Freepik.
+                        </div>
+                    </div>
+            
+                    <!-- Seção do texto -->
+                    <div class="text-section">
+                        Apesar de serem pessoas abertas e sociáveis, os brasileiros
+                        costumam distinguir bem entre um conhecido e um amigo.
+                        Ser simpático não é o mesmo que ser íntimo: as amizades
+                        envolvem tempo e confiança. As amizades também são
+                        tipicamente diversas no Brasil. Formar amizades com
+                        outras raças, religiões e estilos de vida não é incomum em
+                        um país de raça mista e multicultural como o nosso. Mesmo
+                        com desafios sociais, a cultura é rica em sua tolerância e
+                        um senso de inclusão.
+                    </div>
+            
+                </div>
+            </div>
+            <br>
+            <p>
+                E já que estamos falando de convivência e celebração, que tal explorar algumas festividades populares
+                do Brasil? Além de divertidas, essas festas também são momentos de encontro, identidade e conexão.
+            </p>
+            <br>
+            <!-- Acordeons da Lista de Compras -->
+            <div class="acordeon-container">
+            
+                <div class="acordeon">
+                    <div class="acordeon-headerd">
+                        CARNAVAL
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-contentd">
+                        <p>
+                            É a festa mais conhecida do Brasil e ocorre geralmente em fevereiro ou março, dependendo
+                            do calendário litúrgico cristão. Sua origem está ligada ao calendário religioso europeu,
+                            com influências africanas e indígenas. No Brasil, o Carnaval ganhou características
+                            próprias, como os desfiles das escolas de samba no Rio de Janeiro e em São Paulo,
+                            os trios elétricos na Bahia e os blocos de rua em diversas cidades do país. A festa é
+                            marcada por fantasias, música, dança e um clima de celebração coletiva.
+                        </p>
+                    </div>
+                </div>
+            
+                <div class="acordeon">
+                    <div class="acordeon-headerd">
+                        FESTAS JUNINAS
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-contentd">
+                        <p>
+                            Ocorrem principalmente em junho, em homenagem a três santos católicos: Santo Antônio,
+                            São João e São Pedro. Têm forte presença no Nordeste, mas são comemoradas em todo
+                            o país. As festas incluem danças típicas como a quadrilha, comidas feitas com milho
+                            (como pamonha, curau e canjica), fogueiras, bandeirinhas e trajes caipiras. As Festas
+                            Juninas celebram as tradições rurais e promovem um resgate da cultura do campo.
+                        </p>
+                    </div>
+                </div>
+            
+                <div class="acordeon">
+                    <div class="acordeon-headerd">
+                        FESTA DO DIVINO ESPÍRITO SANTO
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-contentd">
+                        <p>
+                            Celebrada em diversas regiões do Brasil, especialmente no Centro-Oeste, Sudeste e
+                            Sul, essa festa tem raízes portuguesas e religiosas. Essa festividade envolve missas,
+                            procissões, distribuição de alimentos e celebrações populares. Em algumas localidades,
+                            como em Paraty (RJ) e Pirenópolis (GO), a festa adquire grande importância e mobiliza
+                            toda a comunidade.
+                        </p>
+                    </div>
+                </div>
+            
+                <div class="acordeon">
+                    <div class="acordeon-headerd">
+                        FOLIA DE REIS
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-contentd">
+                        <p>
+                            Também de origem portuguesa, a Folia de Reis é comemorada entre o Natal e o Dia
+                            de Reis (6 de janeiro). Os grupos de foliões percorrem casas e ruas com músicas,
+                            instrumentos e representações dos três reis magos. É uma festa de cunho religioso que
+                            mistura teatro, música e devoção.
+                        </p>
+                    </div>
+                </div>
+            
+                <div class="acordeon">
+                    <div class="acordeon-headerd">
+                        CÍRIO DE NAZARÉ
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-contentd">
+                        <p>
+                            Realizado em Belém do Pará, o Círio de Nazaré é uma das maiores manifestações
+                            religiosas do mundo. Acontece no segundo domingo de outubro e atrai milhões de fiéis.
+                            A imagem de Nossa Senhora de Nazaré é levada em procissão pelas ruas da cidade,
+                            seguida por uma multidão em atos de fé e devoção. A festa inclui diversas atividades
+                            paralelas, como romarias, arraial, missas e manifestações culturais.
+                        </p>
+                        
+                    </div>
+                </div>
+            
+                <div class="acordeon">
+                    <div class="acordeon-headerd">
+                        FESTA DE SÃO BENEDITO
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-contentd">
+                        <p>
+                            Presente principalmente em comunidades afro-brasileiras, a Festa de São Benedito é
+                            uma celebração religiosa e cultural que homenageia o santo negro. Acontece em várias
+                            cidades, com destaque para Aparecida (SP) e Cuiabá (MT). Inclui missas, procissões,
+                            danças, comidas típicas e manifestações de cultura afro-brasileira.
+                        </p>
+                        
+                    </div>
+                </div>
+            
+                <div class="acordeon">
+                    <div class="acordeon-headerd">
+                        LAVAGEM DO BONFIM
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-contentd">
+                        <p>
+                            Acontece em Salvador (BA), em janeiro, e é uma das festas religiosas mais tradicionais
+                            do país. A lavagem das escadarias da Igreja do Senhor do Bonfim, feita por baianas
+                            vestidas de branco, simboliza a união entre o catolicismo e o candomblé. A festa mistura
+                            fé, música, dança e religiosidade popular.
+                        </p>
+                        
+                    </div>
+                </div>
+            
+                <div class="acordeon">
+                    <div class="acordeon-headerd">
+                        FESTA DO BUMBA MEU BOI
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-contentd">
+                        <p>
+                            Muito popular no Norte e Nordeste, especialmente no Maranhão, a Festa do Bumba Meu
+                            Boi celebra uma lenda folclórica que envolve um boi mágico, com elementos de crítica
+                            social e resistência cultural. A festa é rica em música, dança, teatro e fantasias coloridas.
+                        </p>
+                        
+                    </div>
+                </div>
+            
+                <div class="acordeon">
+                    <div class="acordeon-headerd">
+                        CONGADA E MOÇAMBIQUE
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-contentd">
+                        <p>
+                            Celebradas principalmente em Minas Gerais e São Paulo, essas festas têm origem
+                            africana e são manifestações religiosas e culturais que homenageiam santos católicos,
+                            especialmente Nossa Senhora do Rosário. Incluem desfiles, cantos, danças e rituais
+                            marcados por tambores e cores vibrantes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <p>
+                Além das festas tradicionais que já conhecemos, o Brasil também celebra muitos eventos culturais e
+                musicais que mostram a diversidade do país. Você sabia que, em 2025, a Virada Cultural Paulista teve
+                21 palcos distribuídos pela cidade? É um grande festival com shows, espetáculos e atividades culturais
+                para todos os gostos. Quer saber mais? Acesse: https://www.viradasp.com.br/ (Acesso em: 11 jul. 2025).
+            </p>
+            <br>
+            <section class="card-horizontal-praticar">
+                <h2 class="titulo-praticar">Você sabia?</h2>
+                <p class="texto-praticar">
+                    São Paulo, a maior cidade do Brasil, é um verdadeiro centro de eventos culturais, abrigando diversos festivais
+                    ao longo do ano. Entre os mais destacados estão a Virada Cultural, um evento gratuito de 24 horas com
+                    shows, teatro, cinema e dança espalhados pela cidade; a Bienal Internacional do Livro de São Paulo, que
+                    reúne leitores, escritores e editoras de todo o mundo; o Festival de Cinema de São Paulo, com exibições de
+                    filmes nacionais e internacionais; e o Festival de Cultura Coreana, que celebra a presença da comunidade
+                    asiática com música, dança e gastronomia típica. Além disso, São Paulo sedia eventos de arte urbana,
+                    feiras gastronômicas, festivais LGBTQIAPN+, e encontros multiculturais que refletem a pluralidade de sua
+                    população. Esses festivais reforçam o papel da cidade como um importante polo de difusão artística e cultural.
+                </p>
+                
+                <img class="imagem-praticar"
+                    src="https://res.cloudinary.com/di4ria1pf/image/upload/v1745601513/wglkd0x3l2uasackwlxn.png"
+                    alt="Imagem de atividade prática">
+            </section>
+            <br>
+            <p>
+                Outros eventos também fazem parte do calendário cultural brasileiro: o Festival de Parintins, no Amazonas,
+                com seus bois Garantido e Caprichoso; a Oktoberfest, em Santa Catarina, com tradição alemã e muita
+                música; o Festival de Inverno de Campos do Jordão, em São Paulo, com foco em música clássica; e as
+                festas contemporâneas como o Lollapalooza e o Rock in Rio, que mostram a força da música internacional
+                e nacional no país. Festas são momentos de criar laços além dos profissionais, e música, boa comida e
+                risadas são ingredientes presentes em todas as comemorações entre brasileiros.
+            </p>
+            <br>
+            <!-- Bloco de vídeo com imagem de fundo -->
+            <div class="video-thumbnail"
+                data-video="https://player-vz-04af0c61-9a0.tv.pandavideo.com.br/embed/?v=47f6e869-db6b-4d8b-ad85-f8dee46b98d1&preload=false">
+                <div class="video-bg"></div>
+                <div class="play-icon">&#9658;</div>
+            </div>
+            
+            <!-- Modal de Vídeo -->
+            <div id="videoModal" class="video-modal">
+                <div class="modal-content">
+                    <span class="fechar-modal">&times;</span>
+                    <iframe id="videoIframe" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <br>
+        </div>
+    </section>
+    <section class="conclusao" id="conclusao">
+        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1745524189/vm6embgebhgp2mhck5qn.png"
+            alt="Imagem topo da seção" class="imagem-topo">
+        <div class="faixa-verde">
+            <h1 class="titulo-secao">
+                CONCLUSÃO
+            </h1>
+        </div>
+        <div class="conteudo-secao">
+            <p>
+                Ao longo desta unidade, exploramos aspectos essenciais da cultura brasileira que vão muito além do
+                vocabulário: falamos sobre família, amizade, convivência, celebrações e comportamento social. Esses
+                elementos não apenas ajudam no aprendizado da língua, mas também revelam como vivemos, nos
+                relacionamos e celebramos a vida no Brasil.
+            </p>
+            <p>
+                Você conheceu festas que marcam os ciclos da vida, como aniversários, casamentos, formaturas e
+                batizados, além de celebrações tradicionais e religiosas, como o Carnaval, as Festas Juninas, o Círio de
+                Nazaré e tantas outras manifestações que reforçam o sentido de comunidade.
+            </p>
+            <p>
+                Também refletimos sobre a diferença entre regras sociais e regras legais, compreendendo que viver em
+                sociedade exige equilíbrio entre respeito mútuo, responsabilidade e empatia.
+            </p>
+            <p>
+                E também revisamos dois verbos muito usados em qualquer conversa cotidiana: “ir” e “vir”, essenciais
+                para você se comunicar com clareza sobre deslocamentos, planos e rotinas.
+            </p>
+            <p>
+                Em um país com dimensões continentais e uma diversidade cultural tão rica como o Brasil, cada canto
+                tem sua forma própria de celebrar e se expressar. Mas, a hospitalidade, o calor humano e a criatividade
+                que marcam a identidade do povo brasileiro. Por isso, seja você brasileiro ou estrangeiro, é sempre bem
+                vindo a fazer parte dessa vivência cheia de sabores, sons, afetos e histórias.
+            </p>
+    
+            <div id="download" class="download-section">
+                <a href="https://drive.google.com/uc?export=download&id=1XKgK6EcD8zX-RennFs3dqflsBOT_0d8j" class="download-btn">
+                    Baixar PDF <i class="fas fa-download"></i> <!-- Ícone de download -->
+                </a>
+            </div>
+            <br>
+            <section class="atividade-sectionb">
+                <div class="atividade-headerb">
+                    <h2>AGORA É SUA VEZ!</h2>
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1744848303/g7vh0r0sje52zd19k9ww.png"
+                        alt="Ícone título">
+                </div>
+            
+                <p class="atividade-textob">
+                    Aprender uma nova língua é um processo, e praticar faz toda a diferença. Que tal reservar um tempinho para
+                    exercitar o que estudamos até agora? Use os exercícios como uma forma de revisar e se familiarizar ainda
+                    mais com o conteúdo. Vamos nessa?
+                </p>
+            
+                <div class="atividade-quizz">
+                    <a href="#" onclick="abrirQuizz(event)">
+                        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1745869741/r1sc3oyzzu1ca5mqiud4.png"
+                            alt="Imagem para abrir o quiz">
+                    </a>
+                </div>
+            
+                <div id="iframe-container" style="display: none; margin-top: 20px; position: relative;">
+                    <!-- Botão de fechar -->
+                    <button onclick="fecharQuizz()" class="btn-fechar-quizz">&times;</button>
+            
+                    <!-- Iframe do Genially -->
+                    <iframe id="quizz-iframe" src="" width="100%" height="500px"
+                        style="border: 2px solid #134969; border-radius: 10px;"></iframe>
+                </div>
+            </section>
+            <br>
+        </div>
+    </section>
+    <section class="referencias" id="referencias">
+        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1745869736/jyzm19p9bgggekjdrgnz.png"
+            alt="Imagem topo da seção" class="imagem-topo">
+        <div class="faixa-verde">
+            <h1 class="titulo-secao">
+                REFERÊNCIAS
+            </h1>
+        </div>
+        <br>
+        <div class="conteudo-secao">
+            <p>
+                BECHARA, E. <strong>Moderna gramática portuguesa</strong>. 37. ed. Rio de Janeiro: Nova Fronteira, 2009.
+            </p>
+            <p>
+                CUNHA, C.; CINTRA, L. <strong>Nova gramática do português contemporâneo</strong>. 5. ed. Rio de Janeiro: Lexikon, 2008.
+            </p>
+            <p>
+                ROCHA LIMA, C. H. <strong>Gramática normativa da língua portuguesa</strong>. 49. ed. São Paulo: José Olympio, 2005.
+            </p>
+        </div>
+        <br>
+    </section>
+    <!-- Seção com os créditos e ficha técnica -->
+    <section class="ficha-tecnica">
+        <p>CASA NOSSA SENHORA DA PAZ – AÇÃO SOCIAL FRANCISCANA, PROVÍNCIA FRANCISCANA DA <br>
+            IMACULADA CONCEIÇÃO DO BRASIL – ORDEM DOS FRADES MENORES</p>
+        <br>
+        <p><strong>GESTOR DO CENTRO DE INOVAÇÃO E SOLUÇÕES EDUCACIONAIS - CISE</strong>
+            Franklin Portela Correia</p>
+    
+        <p><strong>COORDENADOR NÚCLEO DE RELAÇÕES INTERNACIONAIS - NRI</strong>
+            Lucas da Silveira Andrade</p>
+    
+        <p><strong>SUPERVISORA EDUCACIONAL</strong>
+            Juliane Cristine Batista</p>
+    
+        <p><strong>DESIGNER INSTRUCIONAL</strong>
+            Leticia dos Santos Vilela<br>
+            Sara Marques Batista</p>
+    
+        <p><strong>REVISÃO TEXTUAL</strong>
+            Luisa de Souza</p>
+    
+        <p><strong>PROJETO GRÁFICO</strong>
+            Lucas Ichimaru Testa<br>
+            Simone Aparecida Barbosa</p>
+    
+        <p><strong>DESENVOLVEDOR</strong>
+            Pedro Vinicius Pires de Oliveira Dias</p>
+    
+        <p><strong>PRODUTOR AUDIOVISUAL</strong>
+            Cassio Martins de Carvalho</p>
+    
+        <p><strong>EDIÇÃO DE VÍDEOS</strong>
+            Rafael da Silva Oliveira<br>
+            Hugo Henrique Ferreira da Silva</p>
+    
+        <p><span class="paragraforeduzido">
+                © 2025 Universidade São Francisco<br>
+                Avenida São Francisco de Assis, 218<br>
+                CEP 12916-900 – Bragança Paulista/SP
+        </p></span>
+    </section>
+    <section class="logo-final">
+        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1746464849/kawkuex8fxesnmqpek5n.png"
+            alt="Logo do Projeto">
+    </section>
+    <footer class="footer">
+        <p>Copyright © de Universidade São Francisco</p>
+        <hr class="footer-divider">
+        <span class="fonte-menor">Todos os direitos reservados. Este ebook ou
+            qualquer parte dele não pode ser reproduzido ou usado em quaisquer formas (eletrônico,
+            gravação, fotocópia, distribuição pela Internet ou outros) sem autorização
+            expressa, por escrito, da <strong>Universidade São Francisco.</strong></span>
+    </footer>
+<script>
+        // Navbar
+            document.querySelector('.menu-toggle').addEventListener('click', () => {
+                const menu = document.querySelector('.navbar ul');
+                const icons = document.querySelectorAll('.menu-toggle i'); // Seleciona ambos os ícones
+
+                menu.classList.toggle('show'); // Alterna a visibilidade do menu
+
+                // Alterna entre o ícone de abrir (menu) e o ícone de fechar (x)
+                icons[0].style.display = icons[0].style.display === 'none' ? 'block' : 'none'; // Mostra ou esconde o ícone de menu
+                icons[1].style.display = icons[1].style.display === 'none' ? 'block' : 'none'; // Mostra ou esconde o ícone de fechar
+            });
+            // Fechar o menu ao clicar em um link
+            const links = document.querySelectorAll('.navbar ul li a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    const menu = document.querySelector('.navbar ul');
+                    const icons = document.querySelectorAll('.menu-toggle i');
+
+                    // Fecha o menu ao clicar no link
+                    menu.classList.remove('show');
+                    icons[0].style.display = 'block'; // Exibe o ícone de menu
+                    icons[1].style.display = 'none'; // Esconde o ícone de fechar
+                });
+            });
+            // Captura o elemento navbar
+            const navbar = document.querySelector('.navbar');
+
+            // Função que altera a opacidade da navbar
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) { // Quando o scroll for maior que 50px
+                    navbar.style.backgroundColor = 'rgba(29, 91, 122, 0.438)'; // Opacidade 80% rgba(29, 91, 122, 0.438);
+                } else {
+                    navbar.style.backgroundColor = '#134969'; // Cor original sem transparência
+                }
+            });
+
+            const thumbnails = document.querySelectorAll('.video-thumbnail');
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('videoIframe');
+            const fechar = document.querySelector('.fechar-modal');
+
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', () => {
+                    const videoLink = thumbnail.getAttribute('data-video');
+                    iframe.src = videoLink + "?autoplay=1";
+                    modal.style.display = 'flex';
+                });
+            });
+
+            fechar.addEventListener('click', () => {
+                modal.style.display = 'none';
+                iframe.src = '';
+            });
+
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                    iframe.src = '';
+                }
+            });
+            document.querySelectorAll('.acordeon-header, .acordeon-headerb, .acordeon-headerc, .acordeon-headerd').forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    const isVisible = content.style.display === 'block';
+                    content.style.display = isVisible ? 'none' : 'block';
+                    const icon = header.querySelector('.acordeon-icon');
+                    if (icon) {
+                        icon.classList.toggle('bx-chevron-up', !isVisible);
+                        icon.classList.toggle('bx-chevron-down', isVisible);
+                    }
+                });
+            });
+            function configurarTabs(containerId) {
+                const container = document.getElementById(containerId);
+                if (!container) return; // Se não existir, evita erro no console
+
+                const buttons = container.querySelectorAll('button');
+                const contents = container.querySelectorAll('.tab-content');
+                const contentWrappers = container.querySelectorAll('.tabs-content, .tabs-contentb, .tabs-contentc, .tabs-contentd');
+
+                // Garante que tudo comece fechado
+                buttons.forEach(btn => btn.classList.remove('ativo'));
+                contents.forEach(content => content.classList.remove('ativo'));
+                contentWrappers.forEach(wrapper => wrapper.classList.remove('ativo'));
+
+                buttons.forEach((button, index) => {
+                    // Clique com mouse
+                    button.addEventListener('click', function () {
+                        ativarTab(this);
+                    });
+
+                    // Suporte ao teclado ← e →
+                    button.addEventListener('keydown', function (e) {
+                        if (e.key === 'ArrowRight') {
+                            e.preventDefault();
+                            const nextIndex = (index + 1) % buttons.length;
+                            buttons[nextIndex].focus();
+                        } else if (e.key === 'ArrowLeft') {
+                            e.preventDefault();
+                            const prevIndex = (index - 1 + buttons.length) % buttons.length;
+                            buttons[prevIndex].focus();
+                        } else if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            ativarTab(this); // Ativa com Enter ou Espaço
+                        }
+                    });
+                });
+
+                function ativarTab(botao) {
+                    const tabId = botao.getAttribute('data-target');
+                    const targetContent = container.querySelector(`#${tabId}`);
+                    const isActive = botao.classList.contains('ativo');
+
+                    // Fecha todos
+                    buttons.forEach(btn => {
+                        btn.classList.remove('ativo');
+                        btn.setAttribute('aria-selected', 'false');
+                    });
+                    contents.forEach(content => content.classList.remove('ativo'));
+                    contentWrappers.forEach(wrapper => wrapper.classList.remove('ativo'));
+
+                    // Ativa se ainda não estiver ativo
+                    if (!isActive) {
+                        botao.classList.add('ativo');
+                        botao.setAttribute('aria-selected', 'true');
+                        if (targetContent) {
+                            targetContent.classList.add('ativo');
+                            const parentWrapper = targetContent.closest('.tabs-content, .tabs-contentb, .tabs-contentc, .tabs-contentd');
+                            if (parentWrapper) parentWrapper.classList.add('ativo');
+
+                            prepararModal(); // <-- CHAMA AQUI APÓS A ABA SER ATIVADA
+
+                        }
+                    }
+                }
+
+                // Ativa a primeira aba por padrão
+                if (buttons.length > 0) {
+                    ativarTab(buttons[0]);
+                }
+            }
+
+            // Inicializar os grupos de tabs
+            configurarTabs('grupo-tabs-a');
+            configurarTabs('grupo-tabs-b');
+            configurarTabs('grupo-tabs-c');
+            configurarTabs('grupo-tabs-d');
+
+            document.querySelectorAll('.slider-quadrinhos').forEach((sliderContainer) => {
+                const slider = sliderContainer.querySelector('.slider');
+                const slides = slider.querySelectorAll('.slide');
+                const dots = sliderContainer.querySelectorAll('.dot');
+                let currentIndex = 0;
+
+                function mostrarSlide(index) {
+                    currentIndex = (index + slides.length) % slides.length;
+                    slides.forEach(slide => slide.classList.remove('ativo'));
+                    dots.forEach(dot => dot.classList.remove('ativo'));
+
+                    slides[currentIndex].classList.add('ativo');
+                    dots[currentIndex].classList.add('ativo');
+                }
+
+                // Atribui os handlers aos botões de seta
+                sliderContainer.querySelector('.seta.esquerda').addEventListener('click', () => {
+                    mostrarSlide(currentIndex - 1);
+                });
+                sliderContainer.querySelector('.seta.direita').addEventListener('click', () => {
+                    mostrarSlide(currentIndex + 1);
+                });
+
+                // Atribui os handlers aos dots
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        mostrarSlide(index);
+                    });
+                });
+
+                // Inicializa
+                mostrarSlide(0);
+            });
+
+            // Abrir modal ao clicar na imagem
+                function openModal(imgElement) {
+                    let modal = document.getElementById("imageModal");
+                    let modalImg = document.getElementById("modalImg");
+
+                    modal.style.display = "flex";
+                    modalImg.src = imgElement.src;
+                }
+
+                // Fechar modal ao clicar no fundo ou no botão "X"
+                function closeModal() {
+                    document.getElementById("imageModal").style.display = "none";
+                }
+
+                let imagensModal = [];
+                let indiceModal = 0;
+
+            function prepararModal() {
+                document.querySelectorAll('.slider-quadrinhos').forEach((sliderContainer) => {
+                    const imagens = sliderContainer.querySelectorAll('.slide');
+                    imagens.forEach((img, index) => {
+                        img.style.cursor = 'pointer';
+                        img.addEventListener('click', () => {
+                            imagensModal = Array.from(imagens).map(i => i.src);
+                            indiceModal = index;
+                            abrirModal(imagensModal[indiceModal]);
+                        });
+                    });
+                });
+            }
+
+            function abrirModal(src) {
+                document.getElementById('imagem-ampliada').src = src;
+                document.getElementById('modal-imagem').classList.add('ativo');
+                atualizarContador();
+                atualizarPontos();
+            }
+
+            function fecharModal() {
+                document.getElementById('modal-imagem').classList.remove('ativo');
+            }
+
+            function navegarModal(direcao) {
+                indiceModal = (indiceModal + direcao + imagensModal.length) % imagensModal.length;
+                document.getElementById('imagem-ampliada').src = imagensModal[indiceModal];
+                atualizarContador();
+                atualizarPontos();
+            }
+
+            function atualizarContador() {
+                document.getElementById('contador-modal').textContent = `${indiceModal + 1} / ${imagensModal.length}`;
+            }
+
+            function atualizarPontos() {
+                const container = document.getElementById('pontos-modal');
+                container.innerHTML = '';
+                imagensModal.forEach((_, i) => {
+                    const ponto = document.createElement('span');
+                    if (i === indiceModal) ponto.classList.add('ativo');
+                    ponto.addEventListener('click', () => {
+                        indiceModal = i;
+                        document.getElementById('imagem-ampliada').src = imagensModal[i];
+                        atualizarContador();
+                        atualizarPontos();
+                    });
+                    container.appendChild(ponto);
+                });
+            }
+
+
+            document.querySelectorAll('.slider-texto-container').forEach(initSliderTexto);
+
+            function initSliderTexto(container) {
+                const slides = container.querySelectorAll('.slide-texto');
+                const indicatorsContainer = container.querySelector('.slider-texto-indicadores');
+
+                indicatorsContainer.innerHTML = ''; // Limpa indicadores anteriores
+
+                // Cria os dots dinamicamente
+                slides.forEach((_, index) => {
+                    const dot = document.createElement('span');
+                    dot.classList.add('dot-texto');
+                    dot.onclick = () => mostrarSlide(index);
+                    indicatorsContainer.appendChild(dot);
+                });
+
+                const dots = container.querySelectorAll('.dot-texto');
+                let currentIndex = 0;
+
+                function mostrarSlide(index) {
+                    slides.forEach(slide => slide.classList.remove('ativo'));
+                    dots.forEach(dot => dot.classList.remove('ativo'));
+
+                    currentIndex = (index + slides.length) % slides.length;
+
+                    slides[currentIndex].classList.add('ativo');
+                    dots[currentIndex].classList.add('ativo');
+                }
+
+                // Armazena a função no container para chamadas externas
+                container.mostrarSlideTexto = mostrarSlide;
+                container.getCurrentIndex = () => currentIndex;
+                mostrarSlide(0);
+            }
+
+            // Chamado pelos botões de seta
+            function mudarSlideTexto(button, direcao) {
+                const container = button.closest('.slider-texto-container');
+                const currentIndex = container.getCurrentIndex();
+                container.mostrarSlideTexto(currentIndex + direcao);
+            }
+
+            // Chamado pelos dots (não necessário, mas deixado por compatibilidade)
+            function irParaSlideTexto(dot, index) {
+                const container = dot.closest('.slider-texto-container');
+                container.mostrarSlideTexto(index);
+            }
+
+
+            function abrirQuizz(event) {
+                event.preventDefault();
+                const iframeContainer = document.getElementById('iframe-container');
+                const iframe = document.getElementById('quizz-iframe');
+
+                // Link real do Genially
+                iframe.src = 'https://view.genially.com/687505d89ec2b390b15c89d8';
+                iframeContainer.style.display = 'block';
+            }
+
+            function fecharQuizz() {
+                const iframeContainer = document.getElementById('iframe-container');
+                const iframe = document.getElementById('quizz-iframe');
+
+                iframe.src = ''; // limpa o conteúdo do iframe
+                iframeContainer.style.display = 'none';
+            }
+</script>
+</body>
+</html>
